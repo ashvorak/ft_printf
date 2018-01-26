@@ -2,8 +2,8 @@
 
 int active_bits(wchar_t value)
 {
-	int size = 21;
-	int c = 1048576;
+	int size = 32;
+	unsigned int c = 2147483648;
 	while (size > 0)
 	{
 		if ((c & value) != 0)

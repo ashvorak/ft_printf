@@ -82,5 +82,4 @@ const char			*handle_qualifier(const char *p, t_spec *spec)
 		else
 			spec->type = *(p++);
 	return (p);
-
 }
