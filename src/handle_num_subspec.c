@@ -13,11 +13,13 @@ static int parse_flags(char *value, t_spec *spec)
 	else if (spec->flags->hash || spec->type == 'p')
 	{
 		if (is_type("oO", spec->type))
+		{
 			if (*value != '0' || spec->accuracy == 0)
 			{
 				ft_putchar('0');
 				return (1);
 			}
+		}
 		else if (is_type("xXp", spec->type))
 		{
 			if (*value != '0' || spec->type == 'p')
