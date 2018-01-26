@@ -1,8 +1,9 @@
 #include "../inc/ft_printf.h"
 
-static char *parse_int(t_spec *spec, va_list ap)
+static int parse_int(t_spec *spec, va_list ap)
 {
-    char *value;
+	int     size;
+    char    *value;
 
     value = NULL;
     if (spec->size == none && spec->type != 'D')
@@ -21,12 +22,15 @@ static char *parse_int(t_spec *spec, va_list ap)
         value = ft_itoa_int(va_arg(ap, intmax_t));
     else if (spec->size == z)
         value = ft_itoa_int(va_arg(ap, size_t));
-    return (value);
+	size = handle_num_subspec(value, spec);
+	(value) ? free(value) : 0;
+    return (size);
 }
 
-static char *parse_base(t_spec *spec, va_list ap)
+static int parse_base(t_spec *spec, va_list ap)
 {
-    char *value;
+	int     size;
+    char    *value;
 
     value = NULL;
 	if (spec->type == 'p')
@@ -47,31 +51,26 @@ static char *parse_base(t_spec *spec, va_list ap)
         value = ft_itoa_base(va_arg(ap, uintmax_t), spec);
     else if (spec->size == z)
         value = ft_itoa_base(va_arg(ap, size_t), spec);
-    return (value);
+	size = handle_num_subspec(value, spec);
+	(value) ? free(value) : 0;
+    return (size);
 }
 
 int handle_value(t_spec *spec, va_list ap)
 {
-	int		size;
-    char	*value;
+	int	size;
 
 	size = 0;
-    value = NULL;
 	if (spec->type == 'c' && spec->size != l)
 		size = handle_char(va_arg(ap, int), spec);
 	else if (spec->type == 'C' || (spec->type == 'c' && spec->size == l))
 		size = handle_wchar(va_arg(ap, wint_t), spec);
 	else if (spec->type == '%')
 		size = handle_char('%', spec);
-	else if (is_type("dDioOxXuUp", spec->type))
-	{
-		if (is_type("dDi", spec->type))
-			value = parse_int(spec, ap);
-		else if (is_type("oOxXuUp", spec->type))
-			value = parse_base(spec, ap);
-		size = handle_num_subspec(value, spec);
-		(value) ? free(value) : 0;
-	}
+	else if (is_type("dDi", spec->type))
+		size = parse_int(spec, ap);
+	else if (is_type("oOxXuUp", spec->type))
+		size = parse_base(spec, ap);
 	else if (spec->type == 's' && spec->size != l)
 		size = handle_str_subspec(va_arg(ap, char*), spec);
 	else if (spec->type == 'S' || (spec->type == 's' && spec->size == l))
