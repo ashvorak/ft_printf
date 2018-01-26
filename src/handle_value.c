@@ -60,7 +60,7 @@ int handle_value(t_spec *spec, va_list ap)
 	if (spec->type == 'c' && spec->size != l)
 		size = handle_char(va_arg(ap, int), spec);
 	else if (spec->type == 'C' || (spec->type == 'c' && spec->size == l))
-		size = handle_char(va_arg(ap, wint_t), spec);
+		size = handle_wchar(va_arg(ap, wint_t), spec);
 	else if (spec->type == '%')
 		size = handle_char('%', spec);
 	else if (is_type("dDioOxXuUp", spec->type))
