@@ -67,8 +67,8 @@ int handle_value(t_spec *spec, va_list ap)
 	{
 		if (is_type("dDi", spec->type))
 			value = parse_int(spec, ap);
-		else if (is_type("oOxXuUp", spec->type))
-			value = parse_base(spec, ap);
+		//else if (is_type("oOxXuUp", spec->type))
+		//	value = parse_base(spec, ap);
 		size = handle_num_subspec(value, spec);
 		(value) ? free(value) : 0;
 	}
