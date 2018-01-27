@@ -21,8 +21,8 @@ int main(void)
 {
 	//setlocale(LC_ALL, "en_US.UTF-8");
 
-	printf("SIZE %d\n", printf("%20.*d\n", 0, 945));
-	printf("SIZE %d\n", ft_printf("%20.*d\n", 0, 945));
+	printf("SIZE %d\n", printf("%20f\n", 777.5));
+	//printf("SIZE %d\n", ft_printf("%20d\n", 777.5));
 
 	return (0);
 }

@@ -12,7 +12,7 @@
 
 #include "../inc/ft_printf.h"
 
-static void		parse_flag(t_spec *spec, const char *p)
+static void			parse_flag(t_spec *spec, const char *p)
 {
 	if (*p == '-' && !spec->flags->minus)
 		spec->flags->minus = TRUE;
@@ -29,7 +29,7 @@ static void		parse_flag(t_spec *spec, const char *p)
 		spec->flags->hash = TRUE;
 }
 
-static const char		*parse_width(t_spec *spec, const char *p, va_list ap)
+static const char	*parse_width(t_spec *spec, const char *p, va_list ap)
 {
 	if (*p != '*')
 	{
@@ -48,10 +48,9 @@ static const char		*parse_width(t_spec *spec, const char *p, va_list ap)
 		p++;
 	}
 	return (p);
-
 }
 
-static const char     *parse_accuracy(t_spec *spec, const char *p, va_list ap)
+static const char	*parse_accuracy(t_spec *spec, const char *p, va_list ap)
 {
 	if (*p != '*')
 	{
@@ -69,7 +68,7 @@ static const char     *parse_accuracy(t_spec *spec, const char *p, va_list ap)
 	return (p);
 }
 
-static const char		*parse_size(t_spec *spec, const char *p)
+static const char	*parse_size(t_spec *spec, const char *p)
 {
 	if (*p == 'h' && *(p + 1) != 'h' && spec->size == none)
 		spec->size = h;

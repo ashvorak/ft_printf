@@ -1,62 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_value.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/27 15:27:41 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/01/27 17:56:26 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
-static int parse_int(t_spec *spec, va_list ap)
+static int	parse_int(t_spec *spec, va_list ap)
 {
-	int     size;
-    char    *value;
+	int		size;
+	char	*value;
 
-    value = NULL;
-    if (spec->size == none && spec->type != 'D')
-            value = ft_itoa_int(va_arg(ap, int));
-    else if (spec->type == 'D')
-            value = ft_itoa_int(va_arg(ap, long int));
-    else if (spec->size == hh)
-        value = ft_itoa_int((signed char)va_arg(ap, int));
-    else if (spec->size == h)
-        value = ft_itoa_int((short int)va_arg(ap, int));
-    else if (spec->size == l)
-        value = ft_itoa_int(va_arg(ap, long int));
-    else if (spec->size == ll)
-        value = ft_itoa_int(va_arg(ap, long long int));
-    else if (spec->size == j)
-        value = ft_itoa_int(va_arg(ap, intmax_t));
-    else if (spec->size == z)
-        value = ft_itoa_int(va_arg(ap, size_t));
+	value = NULL;
+	if (spec->size == none && spec->type != 'D')
+		value = ft_itoa_int(va_arg(ap, int));
+	else if (spec->type == 'D')
+		value = ft_itoa_int(va_arg(ap, long int));
+	else if (spec->size == hh)
+		value = ft_itoa_int((signed char)va_arg(ap, int));
+	else if (spec->size == h)
+		value = ft_itoa_int((short int)va_arg(ap, int));
+	else if (spec->size == l)
+		value = ft_itoa_int(va_arg(ap, long int));
+	else if (spec->size == ll)
+		value = ft_itoa_int(va_arg(ap, long long int));
+	else if (spec->size == j)
+		value = ft_itoa_int(va_arg(ap, intmax_t));
+	else if (spec->size == z)
+		value = ft_itoa_int(va_arg(ap, size_t));
 	size = handle_num_subspec(value, spec);
 	(value) ? free(value) : 0;
-    return (size);
+	return (size);
 }
 
-static int parse_base(t_spec *spec, va_list ap)
+static int	parse_base(t_spec *spec, va_list ap)
 {
-	int     size;
-    char    *value;
+	int		size;
+	char	*value;
 
-    value = NULL;
-	if (spec->type == 'p')
+	value = NULL;
+	if (spec->type == 'p' || spec->type == 'b')
 		value = ft_itoa_base((size_t)va_arg(ap, void*), spec);
-    else if (spec->size == none && is_type("oxXup", spec->type))
+	else if (spec->size == none && is_type("oxXup", spec->type))
 		value = ft_itoa_base(va_arg(ap, unsigned int), spec);
-    else if (is_type("OU", spec->type))
+	else if (is_type("OU", spec->type))
 		value = ft_itoa_base(va_arg(ap, unsigned long int), spec);
-    else if (spec->size == hh)
-        value = ft_itoa_base((unsigned char)va_arg(ap, unsigned int), spec);
-    else if (spec->size == h)
-        value = ft_itoa_base((unsigned short int)va_arg(ap, unsigned int), spec);
-    else if (spec->size == l)
-        value = ft_itoa_base(va_arg(ap, unsigned long int), spec);
-    else if (spec->size == ll)
-        value = ft_itoa_base(va_arg(ap, unsigned long long int), spec);
-    else if (spec->size == j)
-        value = ft_itoa_base(va_arg(ap, uintmax_t), spec);
-    else if (spec->size == z)
-        value = ft_itoa_base(va_arg(ap, size_t), spec);
+	else if (spec->size == hh)
+		value = ft_itoa_base((unsigned char)va_arg(ap, unsigned int), spec);
+	else if (spec->size == h)
+		value = ft_itoa_base((unsigned short int)va_arg(ap, unsigned int), spec);
+	else if (spec->size == l)
+		value = ft_itoa_base(va_arg(ap, unsigned long int), spec);
+	else if (spec->size == ll)
+		value = ft_itoa_base(va_arg(ap, unsigned long long int), spec);
+	else if (spec->size == j)
+		value = ft_itoa_base(va_arg(ap, uintmax_t), spec);
+	else if (spec->size == z)
+		value = ft_itoa_base(va_arg(ap, size_t), spec);
 	size = handle_num_subspec(value, spec);
 	(value) ? free(value) : 0;
-    return (size);
+	return (size);
 }
 
-int handle_value(t_spec *spec, va_list ap)
+int			handle_value(t_spec *spec, va_list ap)
 {
 	int	size;
 
@@ -72,7 +84,7 @@ int handle_value(t_spec *spec, va_list ap)
 		size = handle_char('%', spec);
 	else if (is_type("dDi", spec->type))
 		size = parse_int(spec, ap);
-	else if (is_type("oOxXuUp", spec->type))
+	else if (is_type("oOxXuUpb", spec->type))
 		size = parse_base(spec, ap);
 	else if (spec->type == 's' && spec->size != l)
 		size = handle_str_subspec(va_arg(ap, char*), spec);
@@ -82,5 +94,5 @@ int handle_value(t_spec *spec, va_list ap)
 		size = handle_char(spec->type, spec);
 	free(spec->flags);
 	free(spec);
-    return (size);
+	return (size);
 }

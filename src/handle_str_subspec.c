@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_str_subspec.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/27 15:27:32 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/01/27 15:27:53 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
-static int str_print(char *value, int len)
+static int	str_print(char *value, int len)
 {
 	int i;
 
@@ -13,10 +25,10 @@ static int str_print(char *value, int len)
 	return (i);
 }
 
-static int parse_width(int len, t_spec *spec)
+static int	parse_width(int len, t_spec *spec)
 {
-	int     size;
-	char    sym;
+	int		size;
+	char	sym;
 
 	size = 0;
 	sym = (spec->flags->zero) ? '0' : ' ';
@@ -29,7 +41,7 @@ static int parse_width(int len, t_spec *spec)
 	return (size);
 }
 
-int handle_str_subspec(char *value, t_spec *spec)
+int			handle_str_subspec(char *value, t_spec *spec)
 {
 	int len;
 	int size;

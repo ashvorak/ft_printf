@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_num_subspec.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/27 15:27:25 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/01/27 15:27:27 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
-static int parse_flags(char *value, t_spec *spec)
+static int	parse_flags(char *value, t_spec *spec)
 {
 	if (*value == '-' || spec->flags->plus || spec->flags->space)
 	{
@@ -32,7 +44,7 @@ static int parse_flags(char *value, t_spec *spec)
 	return (0);
 }
 
-static int parse_accuracy(int len, t_spec *spec, char *value)
+static int	parse_accuracy(int len, t_spec *spec, char *value)
 {
 	int size;
 	int end;
@@ -49,7 +61,7 @@ static int parse_accuracy(int len, t_spec *spec, char *value)
 	return (size);
 }
 
-static int parse_width(char *value, t_spec *spec, int len)
+static int	parse_width(char *value, t_spec *spec, int len)
 {
 	int     size;
 	int     end;
@@ -76,7 +88,7 @@ static int parse_width(char *value, t_spec *spec, int len)
 	return (size);
 }
 
-int handle_num_subspec(char *value, t_spec *spec)
+int			handle_num_subspec(char *value, t_spec *spec)
 {
 	int len;
 	int size;

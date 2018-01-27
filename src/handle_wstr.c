@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_wstr.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/27 15:27:59 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/01/27 15:28:13 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
-static int str_print(wchar_t *value, t_spec *spec)
+static int	str_print(wchar_t *value, t_spec *spec)
 {
 	int i;
 	int j;
@@ -22,11 +34,11 @@ static int str_print(wchar_t *value, t_spec *spec)
 	return (i);
 }
 
-static int parse_width(wchar_t *value, t_spec *spec)
+static int	parse_width(wchar_t *value, t_spec *spec)
 {
-	int     i;
-	int     size;
-	char    sym;
+	int		i;
+	int		size;
+	char	sym;
 
 	i = 0;
 	size = 0;
@@ -46,7 +58,7 @@ static int parse_width(wchar_t *value, t_spec *spec)
 	return (size);
 }
 
-int handle_wstr(wchar_t *value, t_spec *spec)
+int			handle_wstr(wchar_t *value, t_spec *spec)
 {
 	int size;
 
