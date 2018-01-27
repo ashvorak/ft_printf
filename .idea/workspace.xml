@@ -13,37 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b840e765-1604-4cef-a6fb-09314ea94b47" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/__.SYMDEF SORTED" afterPath="$PROJECT_DIR$/__.SYMDEF SORTED" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/active_bits.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/active_bits.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/ft_putwchar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/ft_putwchar.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_char.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_char.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_value.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_value.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_wchar.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_wchar.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_wstr.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/handle_wstr.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/is_type.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/is_type.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/size_char.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/src/size_char.c.o" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf" />
-      <change beforePath="$PROJECT_DIR$/inc/ft_printf.h" afterPath="$PROJECT_DIR$/inc/ft_printf.h" />
-      <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change beforePath="$PROJECT_DIR$/src/active_bits.c" afterPath="$PROJECT_DIR$/src/active_bits.c" />
-      <change beforePath="$PROJECT_DIR$/src/ft_itoa_base.c" afterPath="$PROJECT_DIR$/src/ft_itoa_base.c" />
-      <change beforePath="$PROJECT_DIR$/src/ft_itoa_int.c" afterPath="$PROJECT_DIR$/src/ft_itoa_int.c" />
-      <change beforePath="$PROJECT_DIR$/src/ft_printf.c" afterPath="$PROJECT_DIR$/src/ft_printf.c" />
-      <change beforePath="$PROJECT_DIR$/src/ft_putwchar.c" afterPath="$PROJECT_DIR$/src/ft_putwchar.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_char.c" afterPath="$PROJECT_DIR$/src/handle_char.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_num_subspec.c" afterPath="$PROJECT_DIR$/src/handle_num_subspec.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_qualifier.c" afterPath="$PROJECT_DIR$/src/handle_qualifier.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_str_subspec.c" afterPath="$PROJECT_DIR$/src/handle_str_subspec.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_value.c" afterPath="$PROJECT_DIR$/src/handle_value.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_wchar.c" afterPath="$PROJECT_DIR$/src/handle_wchar.c" />
-      <change beforePath="$PROJECT_DIR$/src/handle_wstr.c" afterPath="$PROJECT_DIR$/src/handle_wstr.c" />
-      <change beforePath="$PROJECT_DIR$/src/is_type.c" afterPath="$PROJECT_DIR$/src/is_type.c" />
-      <change beforePath="$PROJECT_DIR$/src/size_char.c" afterPath="$PROJECT_DIR$/src/size_char.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -141,8 +110,8 @@
       <file leaf-file-name="ft_itoa_base.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ft_itoa_base.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="17" />
+            <state relative-caret-position="510">
+              <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -379,7 +348,7 @@
       <workItem from="1517051117905" duration="7126000" />
       <workItem from="1517059723962" duration="21000" />
       <workItem from="1517060383529" duration="272000" />
-      <workItem from="1517069163506" duration="79000" />
+      <workItem from="1517069163506" duration="156000" />
     </task>
     <task id="LOCAL-00001" summary="new_main">
       <created>1516985773593</created>
@@ -451,11 +420,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517053608200</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixnorm">
+      <created>1517069279766</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1517069279766</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225309000" />
+    <option name="totallyTimeSpent" value="225386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="23" width="1463" height="1337" extended-state="0" />
@@ -497,7 +473,8 @@
     <MESSAGE value="new handle_num" />
     <MESSAGE value="new_C" />
     <MESSAGE value="wildcard" />
-    <option name="LAST_COMMIT_MESSAGE" value="wildcard" />
+    <MESSAGE value="fixnorm" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixnorm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -768,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ft_itoa_base.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="17" />
+        <state relative-caret-position="510">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
           <folding />
         </state>
       </provider>
