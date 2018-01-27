@@ -12,6 +12,19 @@
 
 #include "../inc/ft_printf.h"
 
+static int 	parse_char(t_spec *spec, va_list ap)
+{
+	int size;
+
+	if ((spec->type == 'C' || (spec->type == 'c' && spec->size == l)) && MB_CUR_MAX > 1)
+		size = handle_wchar(va_arg(ap, wint_t), spec);
+	else if (spec->type == '%')
+		size = handle_char('%', spec);
+	else
+		size = handle_char(va_arg(ap, int), spec);
+	return (size);
+}
+
 static int	parse_int(t_spec *spec, va_list ap)
 {
 	int		size;
@@ -67,21 +80,20 @@ static int	parse_base(t_spec *spec, va_list ap)
 	(value) ? free(value) : 0;
 	return (size);
 }
-
+/*
+static int 	parse_double(t_spec *spec, va_list ap)
+{
+	int size;
+	return (size);
+}
+*/
 int			handle_value(t_spec *spec, va_list ap)
 {
 	int	size;
 
 	size = 0;
-	if (is_type("cC", spec->type))
-	{
-		if ((spec->type == 'C' || (spec->type == 'c' && spec->size == l)) && MB_CUR_MAX > 1)
-			size = handle_wchar(va_arg(ap, wint_t), spec);
-		else
-			size = handle_char(va_arg(ap, int), spec);
-	}
-	else if (spec->type == '%')
-		size = handle_char('%', spec);
+	if (is_type("cC%", spec->type))
+		size = parse_char(spec, ap);
 	else if (is_type("dDi", spec->type))
 		size = parse_int(spec, ap);
 	else if (is_type("oOxXuUpb", spec->type))
@@ -90,6 +102,8 @@ int			handle_value(t_spec *spec, va_list ap)
 		size = handle_str_subspec(va_arg(ap, char*), spec);
 	else if (spec->type == 'S' || (spec->type == 's' && spec->size == l))
 		size = handle_wstr(va_arg(ap, wchar_t*), spec);
+//	else if (is_type("fF", spec->type))
+//		size = parse_double(spec, ap);
 	else if (spec->type)
 		size = handle_char(spec->type, spec);
 	free(spec->flags);
