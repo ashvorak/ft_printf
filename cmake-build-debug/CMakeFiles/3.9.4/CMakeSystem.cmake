@@ -1,14 +1,14 @@
-set(CMAKE_HOST_SYSTEM "Darwin-/bin/sh: fork: Resource temporarily unavailable")
+set(CMAKE_HOST_SYSTEM "Darwin-17.0.0")
 set(CMAKE_HOST_SYSTEM_NAME "Darwin")
-set(CMAKE_HOST_SYSTEM_VERSION "/bin/sh: fork: Resource temporarily unavailable")
-set(CMAKE_HOST_SYSTEM_PROCESSOR "unknown")
+set(CMAKE_HOST_SYSTEM_VERSION "17.0.0")
+set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 
 
-set(CMAKE_SYSTEM "Darwin-/bin/sh: fork: Resource temporarily unavailable")
+set(CMAKE_SYSTEM "Darwin-17.0.0")
 set(CMAKE_SYSTEM_NAME "Darwin")
-set(CMAKE_SYSTEM_VERSION "/bin/sh: fork: Resource temporarily unavailable")
-set(CMAKE_SYSTEM_PROCESSOR "unknown")
+set(CMAKE_SYSTEM_VERSION "17.0.0")
+set(CMAKE_SYSTEM_PROCESSOR "x86_64")
 
 set(CMAKE_CROSSCOMPILING "FALSE")
 

@@ -29,17 +29,47 @@ static void		parse_flag(t_spec *spec, const char *p)
 		spec->flags->hash = TRUE;
 }
 
-static void		parse_width(t_spec *spec, const char *p)
+static const char		*parse_width(t_spec *spec, const char *p, va_list ap)
 {
-	spec->width = ft_atoi(p);
+	if (*p != '*')
+	{
+		spec->width = ft_atoi(p);
+		while (ft_isdigit(*p))
+			p++;
+	}
+	else
+	{
+		spec->width = va_arg(ap, int);
+		if (spec->width < 0)
+		{
+			spec->width = -spec->width;
+			spec->flags->minus = TRUE;
+		}
+		p++;
+	}
+	return (p);
+
 }
 
-static void		parse_accuracy(t_spec *spec, const char *p)
+static const char     *parse_accuracy(t_spec *spec, const char *p, va_list ap)
 {
-	spec->accuracy = ft_atoi(p);
+	if (*p != '*')
+	{
+		spec->accuracy = ft_atoi(p);
+		while (ft_isdigit(*p))
+			p++;
+	}
+	else
+	{
+		spec->accuracy = va_arg(ap, int);
+		if (spec->accuracy < 0)
+			spec->accuracy = UNDEFINED;
+		p++;
+	}
+	return (p);
 }
 
-static void		parse_size(t_spec *spec, const char *p)
+static const char		*parse_size(t_spec *spec, const char *p)
 {
 	if (*p == 'h' && *(p + 1) != 'h' && spec->size == none)
 		spec->size = h;
@@ -53,32 +83,23 @@ static void		parse_size(t_spec *spec, const char *p)
 		spec->size = j;
 	else if (*p == 'z')
 		spec->size = z;
+	if (spec->size == hh || spec->size == ll)
+		p++;
+	p++;
+	return (p);
 }
 
-const char			*handle_qualifier(const char *p, t_spec *spec)
+const char			*handle_qualifier(const char *p, t_spec *spec, va_list ap)
 {
 	while (!spec->type && *p)
 		if (*p == '+' || *p == '-' || *p == '0' || *p == ' ' || *p == '#')
 			parse_flag(spec, p++);
-		else if (ft_isdigit(*p))
-		{
-			parse_width(spec, p);
-			while (ft_isdigit(*p))
-				p++;
-		}
+		else if (ft_isdigit(*p) || *p == '*')
+			p = parse_width(spec, p, ap);
 		else if (*p == '.')
-		{
-			parse_accuracy(spec, ++p);
-			while (ft_isdigit(*p))
-				p++;
-		}
+			p = parse_accuracy(spec, ++p, ap);
 		else if (*p == 'h' || *p == 'l' || *p == 'j' || *p == 'z')
-		{
-			parse_size(spec, p);
-			if (spec->size == hh || spec->size == ll)
-				p++;
-			p++;
-		}
+			p = parse_size(spec, p);
 		else
 			spec->type = *(p++);
 	return (p);

@@ -19,10 +19,10 @@
 
 int main(void)
 {
-	setlocale(LC_ALL, "en_US.UTF-8");
+	//setlocale(LC_ALL, "en_US.UTF-8");
 
-	printf("SIZE %d\n", printf("%C\n", 945));
-	printf("SIZE %d\n", ft_printf("%C\n", 945));
+	printf("SIZE %d\n", printf("%20.*d\n", 0, 945));
+	printf("SIZE %d\n", ft_printf("%20.*d\n", 0, 945));
 
 	return (0);
 }

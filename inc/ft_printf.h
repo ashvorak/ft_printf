@@ -55,7 +55,7 @@ typedef struct	s_spec
 }				t_spec;
 
 int				ft_printf(const char *format, ...);
-const char		*handle_qualifier(const char *p, t_spec *spec);
+const char		*handle_qualifier(const char *p, t_spec *spec, va_list ap);
 char            *ft_itoa_int(ssize_t value);
 char            *ft_itoa_base(size_t value, t_spec *spec);
 int				handle_value(t_spec *spec, va_list ap);
