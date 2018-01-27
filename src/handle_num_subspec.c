@@ -88,7 +88,7 @@ int handle_num_subspec(char *value, t_spec *spec)
 		size += parse_flags(value, spec);
 		size += parse_accuracy(len, spec, value);
 		(*value == '-') ? value++ : 0;
-		(*value == '0' && spec->accuracy == 0) ? 0 : ft_putstr(value);
+		(*value == '0' && spec->accuracy == 0) ? 0 : write(1, value, len);
 		while (size < spec->width - len)
 		{
 			ft_putchar(' ');
@@ -100,7 +100,7 @@ int handle_num_subspec(char *value, t_spec *spec)
 		size += parse_width(value, spec, len);
 		(*value == '-') ? value++ : 0;
 		size += parse_accuracy(len, spec, value);
-		(*value == '0' && spec->accuracy == 0) ? size-- : ft_putstr(value);
+		(*value == '0' && spec->accuracy == 0) ? size-- : write(1, value, len);
 	}
 	size += ft_strlen(value);
 	return (size);
