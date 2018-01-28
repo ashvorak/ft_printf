@@ -41,7 +41,7 @@ static int	parse_width(int len, t_spec *spec)
 	return (size);
 }
 
-int			handle_str_subspec(char *value, t_spec *spec)
+int			handle_str(char *value, t_spec *spec)
 {
 	int len;
 	int size;

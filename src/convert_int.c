@@ -1,67 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_itoa_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 13:08:39 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 16:02:10 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/27 16:04:51 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static int	take_size(char type)
-{
-	if (type == 'b')
-		return (2);
-	if (type == 'o' || type == 'O')
-		return (8);
-	if (type == 'u' || type == 'U')
-		return (10);
-	else
-		return (16);
-}
-
-static int	wlen(size_t value, int base)
+static int	wlen(ssize_t value)
 {
 	int num;
 
 	num = 0;
+	if (value < 0)
+	{
+		value = -value;
+		num++;
+	}
 	while (value)
 	{
-		value /= base;
+		value /= 10;
 		num++;
 	}
 	return (num);
 }
 
-char		*ft_itoa_base(size_t value, t_spec *spec)
+char		*convert_int(ssize_t value)
 {
 	int		i;
-	int		base;
-	int		buf;
+	size_t	uvalue;
 	char	*res;
 
 	if (value == 0)
 		return (ft_strsub("0", 0, 1));
-	base = take_size(spec->type);
-	i = wlen(value, base);
-	if (!(res = (char*)malloc(sizeof(char) * (i + 1))))
+	i = wlen(value);
+	if (!(res = ft_strnew(i)))
 		return (NULL);
-	res[i] = '\0';
-	while (value)
+	if (value < 0)
 	{
-		buf = value % base;
-		if (buf > 9)
-			if (spec->type == 'x' || spec->type == 'p')
-				res[--i] = buf + 87;
-			else
-				res[--i] = buf + 55;
-		else
-			res[--i] = buf + '0';
-		value /= base;
+		uvalue = -value;
+		res[0] = '-';
+	}
+	else
+		uvalue = value;
+	while (uvalue)
+	{
+		res[--i] = uvalue % 10 + '0';
+		uvalue /= 10;
 	}
 	return (res);
 }

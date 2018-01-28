@@ -188,13 +188,17 @@ CMakeFiles/ft_printf.dir/src/active_bits.c.o: ../inc/ft_printf.h
 CMakeFiles/ft_printf.dir/src/active_bits.c.o: ../lib/libft.h
 CMakeFiles/ft_printf.dir/src/active_bits.c.o: ../src/active_bits.c
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o: ../inc/ft_printf.h
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o: ../lib/libft.h
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o: ../src/ft_itoa_base.c
+CMakeFiles/ft_printf.dir/src/convert_base.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/convert_base.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/convert_base.c.o: ../src/convert_base.c
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o: ../inc/ft_printf.h
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o: ../lib/libft.h
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o: ../src/ft_itoa_int.c
+CMakeFiles/ft_printf.dir/src/convert_float.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/convert_float.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/convert_float.c.o: ../src/convert_float.c
+
+CMakeFiles/ft_printf.dir/src/convert_int.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/convert_int.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/convert_int.c.o: ../src/convert_int.c
 
 CMakeFiles/ft_printf.dir/src/ft_printf.c.o: ../inc/ft_printf.h
 CMakeFiles/ft_printf.dir/src/ft_printf.c.o: ../lib/libft.h
@@ -208,17 +212,25 @@ CMakeFiles/ft_printf.dir/src/handle_char.c.o: ../inc/ft_printf.h
 CMakeFiles/ft_printf.dir/src/handle_char.c.o: ../lib/libft.h
 CMakeFiles/ft_printf.dir/src/handle_char.c.o: ../src/handle_char.c
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o: ../inc/ft_printf.h
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o: ../lib/libft.h
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o: ../src/handle_num_subspec.c
+CMakeFiles/ft_printf.dir/src/handle_float.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/handle_float.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/handle_float.c.o: ../src/handle_float.c
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/handle_n.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/handle_n.c.o: ../src/handle_n.c
+
+CMakeFiles/ft_printf.dir/src/handle_num.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/handle_num.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/handle_num.c.o: ../src/handle_num.c
 
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o: ../inc/ft_printf.h
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o: ../lib/libft.h
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o: ../src/handle_qualifier.c
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o: ../inc/ft_printf.h
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o: ../lib/libft.h
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o: ../src/handle_str_subspec.c
+CMakeFiles/ft_printf.dir/src/handle_str.c.o: ../inc/ft_printf.h
+CMakeFiles/ft_printf.dir/src/handle_str.c.o: ../lib/libft.h
+CMakeFiles/ft_printf.dir/src/handle_str.c.o: ../src/handle_str.c
 
 CMakeFiles/ft_printf.dir/src/handle_value.c.o: ../inc/ft_printf.h
 CMakeFiles/ft_printf.dir/src/handle_value.c.o: ../lib/libft.h

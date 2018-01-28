@@ -60,7 +60,7 @@ int				ft_printf(const char *format, ...)
 		{
 			spec = spec_new();
 			format = handle_qualifier(++format, spec, ap);
-			size += handle_value(fix(spec), ap);
+			size += handle_value(fix(spec), ap, size);
 		}
 		else
 		{

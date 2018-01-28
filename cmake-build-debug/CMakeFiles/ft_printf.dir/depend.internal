@@ -188,14 +188,18 @@ CMakeFiles/ft_printf.dir/src/active_bits.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
  /Users/oshvorak/ft_printf/src/active_bits.c
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o
+CMakeFiles/ft_printf.dir/src/convert_base.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
- /Users/oshvorak/ft_printf/src/ft_itoa_base.c
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o
+ /Users/oshvorak/ft_printf/src/convert_base.c
+CMakeFiles/ft_printf.dir/src/convert_float.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
- /Users/oshvorak/ft_printf/src/ft_itoa_int.c
+ /Users/oshvorak/ft_printf/src/convert_float.c
+CMakeFiles/ft_printf.dir/src/convert_int.c.o
+ /Users/oshvorak/ft_printf/inc/ft_printf.h
+ /Users/oshvorak/ft_printf/lib/libft.h
+ /Users/oshvorak/ft_printf/src/convert_int.c
 CMakeFiles/ft_printf.dir/src/ft_printf.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
@@ -208,18 +212,26 @@ CMakeFiles/ft_printf.dir/src/handle_char.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
  /Users/oshvorak/ft_printf/src/handle_char.c
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o
+CMakeFiles/ft_printf.dir/src/handle_float.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
- /Users/oshvorak/ft_printf/src/handle_num_subspec.c
+ /Users/oshvorak/ft_printf/src/handle_float.c
+CMakeFiles/ft_printf.dir/src/handle_n.c.o
+ /Users/oshvorak/ft_printf/inc/ft_printf.h
+ /Users/oshvorak/ft_printf/lib/libft.h
+ /Users/oshvorak/ft_printf/src/handle_n.c
+CMakeFiles/ft_printf.dir/src/handle_num.c.o
+ /Users/oshvorak/ft_printf/inc/ft_printf.h
+ /Users/oshvorak/ft_printf/lib/libft.h
+ /Users/oshvorak/ft_printf/src/handle_num.c
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
  /Users/oshvorak/ft_printf/src/handle_qualifier.c
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o
+CMakeFiles/ft_printf.dir/src/handle_str.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h
- /Users/oshvorak/ft_printf/src/handle_str_subspec.c
+ /Users/oshvorak/ft_printf/src/handle_str.c
 CMakeFiles/ft_printf.dir/src/handle_value.c.o
  /Users/oshvorak/ft_printf/inc/ft_printf.h
  /Users/oshvorak/ft_printf/lib/libft.h

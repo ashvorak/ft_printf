@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_int.c                                      :+:      :+:    :+:   */
+/*   ft_float.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "../inc/ft_printf.h"
 
-static int	wlen(ssize_t value)
+static int	wlen(double value)
 {
 	int num;
 
@@ -30,10 +30,9 @@ static int	wlen(ssize_t value)
 	return (num);
 }
 
-char		*ft_itoa_int(ssize_t value)
+char		*convert_float(double value)
 {
 	int		i;
-	size_t	uvalue;
 	char	*res;
 
 	if (value == 0)
@@ -42,16 +41,11 @@ char		*ft_itoa_int(ssize_t value)
 	if (!(res = ft_strnew(i)))
 		return (NULL);
 	if (value < 0)
-	{
-		uvalue = -value;
 		res[0] = '-';
-	}
-	else
-		uvalue = value;
-	while (uvalue)
+	while (value)
 	{
-		res[--i] = uvalue % 10 + '0';
-		uvalue /= 10;
+		//res[--i] = value % 10 + '0';
+		value /= 10;
 	}
 	return (res);
 }

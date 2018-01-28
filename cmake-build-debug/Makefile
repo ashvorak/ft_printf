@@ -1905,59 +1905,86 @@ src/active_bits.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/active_bits.c.s
 .PHONY : src/active_bits.c.s
 
-src/ft_itoa_base.o: src/ft_itoa_base.c.o
+src/convert_base.o: src/convert_base.c.o
 
-.PHONY : src/ft_itoa_base.o
-
-# target to build an object file
-src/ft_itoa_base.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o
-.PHONY : src/ft_itoa_base.c.o
-
-src/ft_itoa_base.i: src/ft_itoa_base.c.i
-
-.PHONY : src/ft_itoa_base.i
-
-# target to preprocess a source file
-src/ft_itoa_base.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.i
-.PHONY : src/ft_itoa_base.c.i
-
-src/ft_itoa_base.s: src/ft_itoa_base.c.s
-
-.PHONY : src/ft_itoa_base.s
-
-# target to generate assembly for a file
-src/ft_itoa_base.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.s
-.PHONY : src/ft_itoa_base.c.s
-
-src/ft_itoa_int.o: src/ft_itoa_int.c.o
-
-.PHONY : src/ft_itoa_int.o
+.PHONY : src/convert_base.o
 
 # target to build an object file
-src/ft_itoa_int.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o
-.PHONY : src/ft_itoa_int.c.o
+src/convert_base.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_base.c.o
+.PHONY : src/convert_base.c.o
 
-src/ft_itoa_int.i: src/ft_itoa_int.c.i
+src/convert_base.i: src/convert_base.c.i
 
-.PHONY : src/ft_itoa_int.i
+.PHONY : src/convert_base.i
 
 # target to preprocess a source file
-src/ft_itoa_int.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.i
-.PHONY : src/ft_itoa_int.c.i
+src/convert_base.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_base.c.i
+.PHONY : src/convert_base.c.i
 
-src/ft_itoa_int.s: src/ft_itoa_int.c.s
+src/convert_base.s: src/convert_base.c.s
 
-.PHONY : src/ft_itoa_int.s
+.PHONY : src/convert_base.s
 
 # target to generate assembly for a file
-src/ft_itoa_int.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.s
-.PHONY : src/ft_itoa_int.c.s
+src/convert_base.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_base.c.s
+.PHONY : src/convert_base.c.s
+
+src/convert_float.o: src/convert_float.c.o
+
+.PHONY : src/convert_float.o
+
+# target to build an object file
+src/convert_float.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_float.c.o
+.PHONY : src/convert_float.c.o
+
+src/convert_float.i: src/convert_float.c.i
+
+.PHONY : src/convert_float.i
+
+# target to preprocess a source file
+src/convert_float.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_float.c.i
+.PHONY : src/convert_float.c.i
+
+src/convert_float.s: src/convert_float.c.s
+
+.PHONY : src/convert_float.s
+
+# target to generate assembly for a file
+src/convert_float.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_float.c.s
+.PHONY : src/convert_float.c.s
+
+src/convert_int.o: src/convert_int.c.o
+
+.PHONY : src/convert_int.o
+
+# target to build an object file
+src/convert_int.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_int.c.o
+.PHONY : src/convert_int.c.o
+
+src/convert_int.i: src/convert_int.c.i
+
+.PHONY : src/convert_int.i
+
+# target to preprocess a source file
+src/convert_int.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_int.c.i
+.PHONY : src/convert_int.c.i
+
+src/convert_int.s: src/convert_int.c.s
+
+.PHONY : src/convert_int.s
+
+# target to generate assembly for a file
+src/convert_int.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_int.c.s
+.PHONY : src/convert_int.c.s
 
 src/ft_printf.o: src/ft_printf.c.o
 
@@ -2040,32 +2067,86 @@ src/handle_char.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_char.c.s
 .PHONY : src/handle_char.c.s
 
-src/handle_num_subspec.o: src/handle_num_subspec.c.o
+src/handle_float.o: src/handle_float.c.o
 
-.PHONY : src/handle_num_subspec.o
+.PHONY : src/handle_float.o
 
 # target to build an object file
-src/handle_num_subspec.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o
-.PHONY : src/handle_num_subspec.c.o
+src/handle_float.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_float.c.o
+.PHONY : src/handle_float.c.o
 
-src/handle_num_subspec.i: src/handle_num_subspec.c.i
+src/handle_float.i: src/handle_float.c.i
 
-.PHONY : src/handle_num_subspec.i
+.PHONY : src/handle_float.i
 
 # target to preprocess a source file
-src/handle_num_subspec.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.i
-.PHONY : src/handle_num_subspec.c.i
+src/handle_float.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_float.c.i
+.PHONY : src/handle_float.c.i
 
-src/handle_num_subspec.s: src/handle_num_subspec.c.s
+src/handle_float.s: src/handle_float.c.s
 
-.PHONY : src/handle_num_subspec.s
+.PHONY : src/handle_float.s
 
 # target to generate assembly for a file
-src/handle_num_subspec.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.s
-.PHONY : src/handle_num_subspec.c.s
+src/handle_float.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_float.c.s
+.PHONY : src/handle_float.c.s
+
+src/handle_n.o: src/handle_n.c.o
+
+.PHONY : src/handle_n.o
+
+# target to build an object file
+src/handle_n.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_n.c.o
+.PHONY : src/handle_n.c.o
+
+src/handle_n.i: src/handle_n.c.i
+
+.PHONY : src/handle_n.i
+
+# target to preprocess a source file
+src/handle_n.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_n.c.i
+.PHONY : src/handle_n.c.i
+
+src/handle_n.s: src/handle_n.c.s
+
+.PHONY : src/handle_n.s
+
+# target to generate assembly for a file
+src/handle_n.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_n.c.s
+.PHONY : src/handle_n.c.s
+
+src/handle_num.o: src/handle_num.c.o
+
+.PHONY : src/handle_num.o
+
+# target to build an object file
+src/handle_num.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num.c.o
+.PHONY : src/handle_num.c.o
+
+src/handle_num.i: src/handle_num.c.i
+
+.PHONY : src/handle_num.i
+
+# target to preprocess a source file
+src/handle_num.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num.c.i
+.PHONY : src/handle_num.c.i
+
+src/handle_num.s: src/handle_num.c.s
+
+.PHONY : src/handle_num.s
+
+# target to generate assembly for a file
+src/handle_num.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num.c.s
+.PHONY : src/handle_num.c.s
 
 src/handle_qualifier.o: src/handle_qualifier.c.o
 
@@ -2094,32 +2175,32 @@ src/handle_qualifier.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_qualifier.c.s
 .PHONY : src/handle_qualifier.c.s
 
-src/handle_str_subspec.o: src/handle_str_subspec.c.o
+src/handle_str.o: src/handle_str.c.o
 
-.PHONY : src/handle_str_subspec.o
+.PHONY : src/handle_str.o
 
 # target to build an object file
-src/handle_str_subspec.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o
-.PHONY : src/handle_str_subspec.c.o
+src/handle_str.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str.c.o
+.PHONY : src/handle_str.c.o
 
-src/handle_str_subspec.i: src/handle_str_subspec.c.i
+src/handle_str.i: src/handle_str.c.i
 
-.PHONY : src/handle_str_subspec.i
+.PHONY : src/handle_str.i
 
 # target to preprocess a source file
-src/handle_str_subspec.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.i
-.PHONY : src/handle_str_subspec.c.i
+src/handle_str.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str.c.i
+.PHONY : src/handle_str.c.i
 
-src/handle_str_subspec.s: src/handle_str_subspec.c.s
+src/handle_str.s: src/handle_str.c.s
 
-.PHONY : src/handle_str_subspec.s
+.PHONY : src/handle_str.s
 
 # target to generate assembly for a file
-src/handle_str_subspec.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.s
-.PHONY : src/handle_str_subspec.c.s
+src/handle_str.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str.c.s
+.PHONY : src/handle_str.c.s
 
 src/handle_value.o: src/handle_value.c.o
 
@@ -2463,12 +2544,15 @@ help:
 	@echo "... src/active_bits.o"
 	@echo "... src/active_bits.i"
 	@echo "... src/active_bits.s"
-	@echo "... src/ft_itoa_base.o"
-	@echo "... src/ft_itoa_base.i"
-	@echo "... src/ft_itoa_base.s"
-	@echo "... src/ft_itoa_int.o"
-	@echo "... src/ft_itoa_int.i"
-	@echo "... src/ft_itoa_int.s"
+	@echo "... src/convert_base.o"
+	@echo "... src/convert_base.i"
+	@echo "... src/convert_base.s"
+	@echo "... src/convert_float.o"
+	@echo "... src/convert_float.i"
+	@echo "... src/convert_float.s"
+	@echo "... src/convert_int.o"
+	@echo "... src/convert_int.i"
+	@echo "... src/convert_int.s"
 	@echo "... src/ft_printf.o"
 	@echo "... src/ft_printf.i"
 	@echo "... src/ft_printf.s"
@@ -2478,15 +2562,21 @@ help:
 	@echo "... src/handle_char.o"
 	@echo "... src/handle_char.i"
 	@echo "... src/handle_char.s"
-	@echo "... src/handle_num_subspec.o"
-	@echo "... src/handle_num_subspec.i"
-	@echo "... src/handle_num_subspec.s"
+	@echo "... src/handle_float.o"
+	@echo "... src/handle_float.i"
+	@echo "... src/handle_float.s"
+	@echo "... src/handle_n.o"
+	@echo "... src/handle_n.i"
+	@echo "... src/handle_n.s"
+	@echo "... src/handle_num.o"
+	@echo "... src/handle_num.i"
+	@echo "... src/handle_num.s"
 	@echo "... src/handle_qualifier.o"
 	@echo "... src/handle_qualifier.i"
 	@echo "... src/handle_qualifier.s"
-	@echo "... src/handle_str_subspec.o"
-	@echo "... src/handle_str_subspec.i"
-	@echo "... src/handle_str_subspec.s"
+	@echo "... src/handle_str.o"
+	@echo "... src/handle_str.i"
+	@echo "... src/handle_str.s"
 	@echo "... src/handle_value.o"
 	@echo "... src/handle_value.i"
 	@echo "... src/handle_value.s"

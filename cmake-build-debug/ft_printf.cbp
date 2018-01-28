@@ -289,10 +289,13 @@
 		<Unit filename="/Users/oshvorak/ft_printf/src/active_bits.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/oshvorak/ft_printf/src/ft_itoa_base.c">
+		<Unit filename="/Users/oshvorak/ft_printf/src/convert_base.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/oshvorak/ft_printf/src/ft_itoa_int.c">
+		<Unit filename="/Users/oshvorak/ft_printf/src/convert_float.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/oshvorak/ft_printf/src/convert_int.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/oshvorak/ft_printf/src/ft_printf.c">
@@ -304,13 +307,19 @@
 		<Unit filename="/Users/oshvorak/ft_printf/src/handle_char.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/oshvorak/ft_printf/src/handle_num_subspec.c">
+		<Unit filename="/Users/oshvorak/ft_printf/src/handle_float.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/oshvorak/ft_printf/src/handle_n.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/oshvorak/ft_printf/src/handle_num.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/oshvorak/ft_printf/src/handle_qualifier.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/oshvorak/ft_printf/src/handle_str_subspec.c">
+		<Unit filename="/Users/oshvorak/ft_printf/src/handle_str.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/oshvorak/ft_printf/src/handle_value.c">

@@ -72,17 +72,17 @@ add_executable(ft_printf
         lib/ft_toupper.c
         lib/libft.h
         src/active_bits.c
-        src/ft_itoa_base.c
-        src/ft_itoa_int.c
+        src/convert_base.c
+        src/convert_int.c
         src/ft_printf.c
         src/ft_putwchar.c
         src/handle_char.c
-        src/handle_num_subspec.c
+        src/handle_num.c
         src/handle_qualifier.c
-        src/handle_str_subspec.c
+        src/handle_str.c
         src/handle_value.c
         src/handle_wchar.c
         src/handle_wstr.c
         src/is_type.c
         src/size_char.c
-        main.c)
+        main.c src/handle_float.c src/convert_float.c src/handle_n.c)

@@ -19,10 +19,16 @@
 
 int main(void)
 {
+	int val;
+
+	ft_printf("blah %n blah\n", &val);
+
+	ft_printf("val = %d\n", val);
+
 	//setlocale(LC_ALL, "en_US.UTF-8");
 
-	printf("SIZE %d\n", printf("%f\n", 9.1));
-	//printf("SIZE %d\n", printf("%020d\n", 777));
+	//printf("SIZE %d\n", printf("%20.50f\n", 66.5));
+	//printf("SIZE %d\n", printf("%n\n", 777));
 	//printf("SIZE %d\n", ft_printf("%020d\n", 777));
 
 	return (0);

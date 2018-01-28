@@ -1617,52 +1617,52 @@ CMakeFiles/ft_printf.dir/src/active_bits.c.o.provides: CMakeFiles/ft_printf.dir/
 CMakeFiles/ft_printf.dir/src/active_bits.c.o.provides.build: CMakeFiles/ft_printf.dir/src/active_bits.c.o
 
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o: ../src/ft_itoa_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o   -c /Users/oshvorak/ft_printf/src/ft_itoa_base.c
+CMakeFiles/ft_printf.dir/src/convert_base.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/convert_base.c.o: ../src/convert_base.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/ft_printf.dir/src/convert_base.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/convert_base.c.o   -c /Users/oshvorak/ft_printf/src/convert_base.c
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/ft_itoa_base.c > CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.i
+CMakeFiles/ft_printf.dir/src/convert_base.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/convert_base.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/convert_base.c > CMakeFiles/ft_printf.dir/src/convert_base.c.i
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/ft_itoa_base.c -o CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.s
+CMakeFiles/ft_printf.dir/src/convert_base.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/convert_base.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/convert_base.c -o CMakeFiles/ft_printf.dir/src/convert_base.c.s
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.requires:
+CMakeFiles/ft_printf.dir/src/convert_base.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_base.c.o.requires
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.provides: CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.provides
+CMakeFiles/ft_printf.dir/src/convert_base.c.o.provides: CMakeFiles/ft_printf.dir/src/convert_base.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_base.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_base.c.o.provides
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.provides.build: CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o
+CMakeFiles/ft_printf.dir/src/convert_base.c.o.provides.build: CMakeFiles/ft_printf.dir/src/convert_base.c.o
 
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o: ../src/ft_itoa_int.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o   -c /Users/oshvorak/ft_printf/src/ft_itoa_int.c
+CMakeFiles/ft_printf.dir/src/convert_int.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/convert_int.c.o: ../src/convert_int.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ft_printf.dir/src/convert_int.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/convert_int.c.o   -c /Users/oshvorak/ft_printf/src/convert_int.c
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/ft_itoa_int.c > CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.i
+CMakeFiles/ft_printf.dir/src/convert_int.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/convert_int.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/convert_int.c > CMakeFiles/ft_printf.dir/src/convert_int.c.i
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/ft_itoa_int.c -o CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.s
+CMakeFiles/ft_printf.dir/src/convert_int.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/convert_int.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/convert_int.c -o CMakeFiles/ft_printf.dir/src/convert_int.c.s
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.requires:
+CMakeFiles/ft_printf.dir/src/convert_int.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_int.c.o.requires
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.provides: CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.provides
+CMakeFiles/ft_printf.dir/src/convert_int.c.o.provides: CMakeFiles/ft_printf.dir/src/convert_int.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_int.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_int.c.o.provides
 
-CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.provides.build: CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o
+CMakeFiles/ft_printf.dir/src/convert_int.c.o.provides.build: CMakeFiles/ft_printf.dir/src/convert_int.c.o
 
 
 CMakeFiles/ft_printf.dir/src/ft_printf.c.o: CMakeFiles/ft_printf.dir/flags.make
@@ -1737,28 +1737,28 @@ CMakeFiles/ft_printf.dir/src/handle_char.c.o.provides: CMakeFiles/ft_printf.dir/
 CMakeFiles/ft_printf.dir/src/handle_char.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_char.c.o
 
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o: ../src/handle_num_subspec.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o   -c /Users/oshvorak/ft_printf/src/handle_num_subspec.c
+CMakeFiles/ft_printf.dir/src/handle_num.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/handle_num.c.o: ../src/handle_num.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft_printf.dir/src/handle_num.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_num.c.o   -c /Users/oshvorak/ft_printf/src/handle_num.c
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_num_subspec.c > CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.i
+CMakeFiles/ft_printf.dir/src/handle_num.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_num.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_num.c > CMakeFiles/ft_printf.dir/src/handle_num.c.i
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_num_subspec.c -o CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.s
+CMakeFiles/ft_printf.dir/src/handle_num.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_num.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_num.c -o CMakeFiles/ft_printf.dir/src/handle_num.c.s
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.requires:
+CMakeFiles/ft_printf.dir/src/handle_num.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_num.c.o.requires
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.provides
+CMakeFiles/ft_printf.dir/src/handle_num.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_num.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_num.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_num.c.o.provides
 
-CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o
+CMakeFiles/ft_printf.dir/src/handle_num.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_num.c.o
 
 
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o: CMakeFiles/ft_printf.dir/flags.make
@@ -1785,28 +1785,28 @@ CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o.provides: CMakeFiles/ft_printf
 CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o
 
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o: ../src/handle_str_subspec.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o   -c /Users/oshvorak/ft_printf/src/handle_str_subspec.c
+CMakeFiles/ft_printf.dir/src/handle_str.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/handle_str.c.o: ../src/handle_str.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft_printf.dir/src/handle_str.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_str.c.o   -c /Users/oshvorak/ft_printf/src/handle_str.c
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_str_subspec.c > CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.i
+CMakeFiles/ft_printf.dir/src/handle_str.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_str.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_str.c > CMakeFiles/ft_printf.dir/src/handle_str.c.i
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_str_subspec.c -o CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.s
+CMakeFiles/ft_printf.dir/src/handle_str.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_str.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_str.c -o CMakeFiles/ft_printf.dir/src/handle_str.c.s
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.requires:
+CMakeFiles/ft_printf.dir/src/handle_str.c.o.requires:
 
-.PHONY : CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.requires
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_str.c.o.requires
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.requires
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.provides.build
-.PHONY : CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.provides
+CMakeFiles/ft_printf.dir/src/handle_str.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_str.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_str.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_str.c.o.provides
 
-CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o
+CMakeFiles/ft_printf.dir/src/handle_str.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_str.c.o
 
 
 CMakeFiles/ft_printf.dir/src/handle_value.c.o: CMakeFiles/ft_printf.dir/flags.make
@@ -1953,6 +1953,78 @@ CMakeFiles/ft_printf.dir/main.c.o.provides: CMakeFiles/ft_printf.dir/main.c.o.re
 CMakeFiles/ft_printf.dir/main.c.o.provides.build: CMakeFiles/ft_printf.dir/main.c.o
 
 
+CMakeFiles/ft_printf.dir/src/handle_float.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/handle_float.c.o: ../src/handle_float.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/ft_printf.dir/src/handle_float.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_float.c.o   -c /Users/oshvorak/ft_printf/src/handle_float.c
+
+CMakeFiles/ft_printf.dir/src/handle_float.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_float.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_float.c > CMakeFiles/ft_printf.dir/src/handle_float.c.i
+
+CMakeFiles/ft_printf.dir/src/handle_float.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_float.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_float.c -o CMakeFiles/ft_printf.dir/src/handle_float.c.s
+
+CMakeFiles/ft_printf.dir/src/handle_float.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_float.c.o.requires
+
+CMakeFiles/ft_printf.dir/src/handle_float.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_float.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_float.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_float.c.o.provides
+
+CMakeFiles/ft_printf.dir/src/handle_float.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_float.c.o
+
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/convert_float.c.o: ../src/convert_float.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/ft_printf.dir/src/convert_float.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/convert_float.c.o   -c /Users/oshvorak/ft_printf/src/convert_float.c
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/convert_float.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/convert_float.c > CMakeFiles/ft_printf.dir/src/convert_float.c.i
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/convert_float.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/convert_float.c -o CMakeFiles/ft_printf.dir/src/convert_float.c.s
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_float.c.o.requires
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.o.provides: CMakeFiles/ft_printf.dir/src/convert_float.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/convert_float.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/convert_float.c.o.provides
+
+CMakeFiles/ft_printf.dir/src/convert_float.c.o.provides.build: CMakeFiles/ft_printf.dir/src/convert_float.c.o
+
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/src/handle_n.c.o: ../src/handle_n.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/ft_printf.dir/src/handle_n.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/src/handle_n.c.o   -c /Users/oshvorak/ft_printf/src/handle_n.c
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/src/handle_n.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/oshvorak/ft_printf/src/handle_n.c > CMakeFiles/ft_printf.dir/src/handle_n.c.i
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/src/handle_n.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/oshvorak/ft_printf/src/handle_n.c -o CMakeFiles/ft_printf.dir/src/handle_n.c.s
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.o.requires:
+
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_n.c.o.requires
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.o.provides: CMakeFiles/ft_printf.dir/src/handle_n.c.o.requires
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/src/handle_n.c.o.provides.build
+.PHONY : CMakeFiles/ft_printf.dir/src/handle_n.c.o.provides
+
+CMakeFiles/ft_printf.dir/src/handle_n.c.o.provides.build: CMakeFiles/ft_printf.dir/src/handle_n.c.o
+
+
 # Object files for target ft_printf
 ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/lib/ft_atoi.c.o" \
@@ -2020,20 +2092,23 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/lib/ft_tolower.c.o" \
 "CMakeFiles/ft_printf.dir/lib/ft_toupper.c.o" \
 "CMakeFiles/ft_printf.dir/src/active_bits.c.o" \
-"CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o" \
-"CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o" \
+"CMakeFiles/ft_printf.dir/src/convert_base.c.o" \
+"CMakeFiles/ft_printf.dir/src/convert_int.c.o" \
 "CMakeFiles/ft_printf.dir/src/ft_printf.c.o" \
 "CMakeFiles/ft_printf.dir/src/ft_putwchar.c.o" \
 "CMakeFiles/ft_printf.dir/src/handle_char.c.o" \
-"CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o" \
+"CMakeFiles/ft_printf.dir/src/handle_num.c.o" \
 "CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o" \
-"CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o" \
+"CMakeFiles/ft_printf.dir/src/handle_str.c.o" \
 "CMakeFiles/ft_printf.dir/src/handle_value.c.o" \
 "CMakeFiles/ft_printf.dir/src/handle_wchar.c.o" \
 "CMakeFiles/ft_printf.dir/src/handle_wstr.c.o" \
 "CMakeFiles/ft_printf.dir/src/is_type.c.o" \
 "CMakeFiles/ft_printf.dir/src/size_char.c.o" \
-"CMakeFiles/ft_printf.dir/main.c.o"
+"CMakeFiles/ft_printf.dir/main.c.o" \
+"CMakeFiles/ft_printf.dir/src/handle_float.c.o" \
+"CMakeFiles/ft_printf.dir/src/convert_float.c.o" \
+"CMakeFiles/ft_printf.dir/src/handle_n.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -2103,23 +2178,26 @@ ft_printf: CMakeFiles/ft_printf.dir/lib/ft_swap.c.o
 ft_printf: CMakeFiles/ft_printf.dir/lib/ft_tolower.c.o
 ft_printf: CMakeFiles/ft_printf.dir/lib/ft_toupper.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/active_bits.c.o
-ft_printf: CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o
-ft_printf: CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/convert_base.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/convert_int.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/ft_printf.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/ft_putwchar.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/handle_char.c.o
-ft_printf: CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/handle_num.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o
-ft_printf: CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/handle_str.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/handle_value.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/handle_wchar.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/handle_wstr.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/is_type.c.o
 ft_printf: CMakeFiles/ft_printf.dir/src/size_char.c.o
 ft_printf: CMakeFiles/ft_printf.dir/main.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/handle_float.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/convert_float.c.o
+ft_printf: CMakeFiles/ft_printf.dir/src/handle_n.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Linking C executable ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/oshvorak/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Linking C executable ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2192,20 +2270,23 @@ CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/lib/ft_swap.c.o.requ
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/lib/ft_tolower.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/lib/ft_toupper.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/active_bits.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/ft_itoa_base.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/ft_itoa_int.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/convert_base.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/convert_int.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/ft_printf.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/ft_putwchar.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_char.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_num_subspec.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_num.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_qualifier.c.o.requires
-CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_str_subspec.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_str.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_value.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_wchar.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_wstr.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/is_type.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/size_char.c.o.requires
 CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/main.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_float.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/convert_float.c.o.requires
+CMakeFiles/ft_printf.dir/requires: CMakeFiles/ft_printf.dir/src/handle_n.c.o.requires
 
 .PHONY : CMakeFiles/ft_printf.dir/requires
 

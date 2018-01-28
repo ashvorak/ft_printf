@@ -278,11 +278,15 @@ limits.h
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
-/Users/oshvorak/ft_printf/src/ft_itoa_base.c
+/Users/oshvorak/ft_printf/src/convert_base.c
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
-/Users/oshvorak/ft_printf/src/ft_itoa_int.c
+/Users/oshvorak/ft_printf/src/convert_float.c
+../inc/ft_printf.h
+/Users/oshvorak/ft_printf/inc/ft_printf.h
+
+/Users/oshvorak/ft_printf/src/convert_int.c
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
@@ -298,7 +302,15 @@ limits.h
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
-/Users/oshvorak/ft_printf/src/handle_num_subspec.c
+/Users/oshvorak/ft_printf/src/handle_float.c
+../inc/ft_printf.h
+/Users/oshvorak/ft_printf/inc/ft_printf.h
+
+/Users/oshvorak/ft_printf/src/handle_n.c
+../inc/ft_printf.h
+/Users/oshvorak/ft_printf/inc/ft_printf.h
+
+/Users/oshvorak/ft_printf/src/handle_num.c
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
@@ -306,7 +318,7 @@ limits.h
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
-/Users/oshvorak/ft_printf/src/handle_str_subspec.c
+/Users/oshvorak/ft_printf/src/handle_str.c
 ../inc/ft_printf.h
 /Users/oshvorak/ft_printf/inc/ft_printf.h
 
