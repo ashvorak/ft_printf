@@ -101,8 +101,6 @@ int			handle_value(t_spec *spec, va_list ap, int len)
 		size = handle_str(va_arg(ap, char*), spec);
 	else if (spec->type == 'S' || (spec->type == 's' && spec->size == l))
 		size = handle_wstr(va_arg(ap, wchar_t*), spec);
-	else if (is_type("fF", spec->type))
-		size = handle_float(convert_float(va_arg(ap, double)), spec);
 	else if (spec->type == 'n')
 		handle_n(spec, len, ap);
 	else if (spec->type)

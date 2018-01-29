@@ -29,7 +29,7 @@ int main(void)
 
 	//printf("SIZE %d\n", printf("%20.50f\n", 66.5));
 	//printf("SIZE %d\n", printf("%n\n", 777));
-	//printf("SIZE %d\n", ft_printf("%020d\n", 777));
+	//printf("SIZE %d\n", ft_printf("%020hhx\n", 777));
 
 	return (0);
 }

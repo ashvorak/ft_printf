@@ -85,4 +85,4 @@ add_executable(ft_printf
         src/handle_wstr.c
         src/is_type.c
         src/size_char.c
-        main.c src/handle_float.c src/convert_float.c src/handle_n.c)
+        main.c src/handle_n.c)
