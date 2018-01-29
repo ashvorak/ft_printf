@@ -6,13 +6,13 @@
 #    By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/23 15:12:57 by oshvorak          #+#    #+#              #
-#    Updated: 2018/01/23 15:13:01 by oshvorak         ###   ########.fr        #
+#    Updated: 2018/01/29 20:32:19 by oshvorak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	libftprintf.a
 
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror -I$(INC)
 
 FT_PRINTF = ./src/active_bits.c \
 			./src/convert_base.c \

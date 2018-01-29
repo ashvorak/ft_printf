@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oshvorak <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 16:45:17 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 16:07:39 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/29 20:34:42 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static t_spec	*spec_new()
+static t_spec	*spec_new(void)
 {
 	t_spec	*spec;
 
@@ -53,7 +53,7 @@ int				ft_printf(const char *format, ...)
 	va_list	ap;
 
 	size = 0;
-	va_start(ap , format);
+	va_start(ap, format);
 	while (*format)
 	{
 		if (*format == '%')

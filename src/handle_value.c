@@ -6,13 +6,13 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:41 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 17:56:26 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/29 20:33:45 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static int 	parse_char(t_spec *spec, va_list ap)
+static int	parse_char(t_spec *spec, va_list ap)
 {
 	int size;
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_num_subspec.c                               :+:      :+:    :+:   */
+/*   handle_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:25 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 15:27:27 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/29 21:59:23 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	parse_flags(char *value, t_spec *spec)
 			(spec->flags->plus) ? ft_putchar('+') : ft_putchar(' ');
 		return (1);
 	}
-	else if (spec->flags->hash || spec->type == 'p')
+	else if (spec->flags->hash)
 	{
 		if (is_type("oO", spec->type))
 		{
@@ -114,6 +114,5 @@ int			handle_num(char *value, t_spec *spec)
 		size += parse_accuracy(len, spec, value);
 		(*value == '0' && spec->accuracy == 0) ? size-- : write(1, value, len);
 	}
-	size += ft_strlen(value);
-	return (size);
+	return (size += ft_strlen(value));
 }

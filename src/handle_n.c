@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_n.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/29 20:33:14 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/01/29 20:34:56 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
 void	handle_n(t_spec *spec, int len, va_list ap)
 {
-	size_t *uv;
-	ssize_t *sv;
+	size_t	*uv;
+	ssize_t	*sv;
 
 	sv = NULL;
 	uv = NULL;
