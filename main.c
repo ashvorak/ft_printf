@@ -29,8 +29,8 @@ int main(void)
 
 	//printf("SIZE %d\n", printf("%20.50f\n", 66.5));
 	//printf("SIZE %d\n", printf("%n\n", 777));
-	printf("SIZE %d\n", printf("%#20.40x\n", 945));
-	printf("SIZE %d\n", ft_printf("%#20.40x\n", 945));
+	printf("SIZE %d\n", printf("%20.40x\n", 945));
+	printf("SIZE %d\n", ft_printf("%20.40x\n", 945));
 
 	return (0);
 }
