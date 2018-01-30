@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   handle_str_subspec.c                               :+:      :+:    :+:   */
+/*   handle_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:32 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 15:27:53 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/30 13:38:05 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ static int	str_print(char *value, int len)
 
 	i = 0;
 	while (i < len && *value)
-	{
-		ft_putchar(*value++);
 		i++;
-	}
+	write(1, &(*value), i);
 	return (i);
 }
 

@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:59 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 15:28:13 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/01/30 13:43:43 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static int	str_print(wchar_t *value, t_spec *spec)
 static int	parse_width(wchar_t *value, t_spec *spec)
 {
 	int		i;
+	int		j;
 	int		size;
 	char	sym;
 
@@ -45,8 +46,12 @@ static int	parse_width(wchar_t *value, t_spec *spec)
 	sym = (spec->flags->zero) ? '0' : ' ';
 	while (*value)
 	{
-		if (i + size_char(active_bits(*value)) <= spec->accuracy || spec->accuracy == UNDEFINED)
-			i += size_char(active_bits(*value++));
+		j = size_char(active_bits(*value));
+		if (i + j <= spec->accuracy || spec->accuracy == UNDEFINED)
+		{
+			i += j;
+			value++;
+		}
 		else
 			break ;
 	}
