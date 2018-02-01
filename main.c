@@ -38,11 +38,14 @@ int main(void)
 	printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
 	ft_printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
 
-	printf("{%f}{%F}\n", 1.42, 1.42);
-	ft_printf("{%f}{%F}\n", 1.42, 1.42);
-
 	printf("{%f}{%F}\n", -1.42, -1.42);
 	ft_printf("{%f}{%F}\n", -1.42, -1.42);
+
+	//printf("{%.9f}\n", -1.42);
+	//ft_printf("{%.9f}\n", -1.42);
+
+	printf("{%f}{%F}\n", 1.42, 1.42);
+	ft_printf("{%f}{%F}\n", 1.42, 1.42);
 
 	//printf("SIZES %d\n", printf("stan a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 	//printf("SIZEM %d\n", ft_printf("mymy a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
