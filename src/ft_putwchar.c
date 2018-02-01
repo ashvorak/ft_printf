@@ -65,7 +65,7 @@ static void	parse_4bytes(unsigned int v, unsigned int mask3)
 	octet = ((mask3 << 24) >> 24) | o4;
 	write(1, &octet, 1);
 }
-
+//fix
 void		ft_putwchar(wchar_t value, int bits)
 {
 	unsigned char	o;
@@ -78,7 +78,7 @@ void		ft_putwchar(wchar_t value, int bits)
 	mask1 = 49280;
 	mask2 = 14712960;
 	mask3 = 4034953344;
-	if (bits <= 7)
+	if (bits <= 7 || MB_CUR_MAX == 1)
 	{
 		o = value;
 		write(1, &o, 1);

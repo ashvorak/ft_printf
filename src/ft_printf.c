@@ -38,7 +38,7 @@ static t_spec	*fix(t_spec *spec)
 		spec->flags->hash = TRUE;
 	else if (!is_type("oOxXp", spec->type))
 		spec->flags->hash = FALSE;
-	if (!is_type("dDi", spec->type))
+	if (!is_type("dDifF", spec->type))
 	{
 		spec->flags->space = FALSE;
 		spec->flags->plus = FALSE;

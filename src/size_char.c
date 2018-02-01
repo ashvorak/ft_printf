@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/ft_printf.h"
+
 int	size_char(int bits)
 {
-	if (bits <= 7)
+	if (bits <= 7 || MB_CUR_MAX == 1)
 		return (1);
 	else if (bits > 7 && bits <= 11)
 		return (2);

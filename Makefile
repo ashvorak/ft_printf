@@ -17,17 +17,20 @@ CFLAGS = -Wall -Wextra -Werror -I$(INC)
 FT_PRINTF = ./src/active_bits.c \
 			./src/convert_base.c \
 			./src/convert_int.c \
+			./src/convert_float.c \
 			./src/ft_printf.c \
 			./src/ft_putwchar.c \
 			./src/handle_char.c \
 			./src/handle_n.c \
 			./src/handle_num.c \
+			./src/handle_float.c \
 			./src/handle_str.c \
 			./src/handle_qualifier.c \
 			./src/handle_value.c \
 			./src/handle_wchar.c \
 			./src/handle_wstr.c \
 			./src/is_type.c \
+			./src/ft_realloc.c \
 			./src/size_char.c
 
 LIBFT = ./lib/ft_atoi.c \

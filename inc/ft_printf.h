@@ -58,10 +58,12 @@ int				ft_printf(const char *format, ...);
 const char		*handle_qualifier(const char *p, t_spec *spec, va_list ap);
 char			*convert_int(ssize_t value);
 char			*convert_base(size_t value, t_spec *spec);
+char			*convert_float(double v_double, t_spec *spec);
 int				handle_value(t_spec *spec, va_list ap, int len);
 int				handle_char(char c, t_spec *spec);
 int				handle_wchar(wchar_t c, t_spec *spec);
 int				handle_num(char *value, t_spec *spec);
+int				handle_float(char *value, t_spec *spec);
 void			handle_n(t_spec *spec, int len, va_list ap);
 int				handle_str(char *value, t_spec *spec);
 int				handle_wstr(wchar_t *value, t_spec *spec);
@@ -69,5 +71,6 @@ void			ft_putwchar(wchar_t value, int bits);
 int				active_bits(wchar_t value);
 int				size_char(int bits);
 int				is_type(char *types, char type);
+char			*ft_realloc(char *str, int size);
 
 #endif

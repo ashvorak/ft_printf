@@ -68,7 +68,8 @@ int			handle_wstr(wchar_t *value, t_spec *spec)
 	int size;
 
 	size = 0;
-	value = (value) ? value : L"(null)";
+	if (!value)
+		return(handle_str((char*)value, spec));
 	if (spec->flags->minus)
 	{
 		size += str_print(value, spec);
