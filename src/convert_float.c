@@ -3,33 +3,41 @@
 static double fix_accuracy(double v_double, t_spec *spec)
 {
 	int		i;
-	int 	tmp_i;
+	ssize_t 	tmp_i;
 	double	tmp_d;
 	double 	acc;
 
 	i = 0;
 	acc = 1;
 	tmp_i = 0;
-	tmp_d = v_double;
 	if (spec->accuracy != 0)
 	{
 		while (i <= spec->accuracy)
 		{
 			acc /= 10;
+			i++;
+		}
+		if (v_double > 0)
+			v_double += acc;
+		else
+			v_double -= acc;
+		i = 0;
+		tmp_d = v_double;
+		while (i <= spec->accuracy)
+		{
 			tmp_d *= 10;
 			tmp_i = (ssize_t)tmp_d;
 			tmp_d -= (ssize_t)tmp_d;
 			i++;
 		}
-		tmp_d *= 10;
-		tmp_i -= (ssize_t)tmp_d;
-		//if (tmp_i > 4)
-		//{
+		if (tmp_i > 4)
+		{
+			acc *= 10;
 			if (v_double > 0)
 				v_double += acc;
 			else
 				v_double -= acc;
-		//}
+		}
 	}
 	return (v_double);
 }
