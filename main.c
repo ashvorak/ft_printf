@@ -32,20 +32,20 @@ int main(void)
 
 	//printf("SIZE %d\n", printf("%20.9f\n", 5.999994));
 
-	printf("SIZE %d\n", printf("%.4f\n", 1.89999999));
-	printf("SIZE %d\n", ft_printf("%.4f\n", 1.89999999));
+//	printf("SIZE %d\n", printf("%.4f\n", 1.89499999));
+//	printf("SIZE %d\n", ft_printf("%.4f\n", 1.89499999));
 
-	printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
-	ft_printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
+//	printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
+//	ft_printf("{%f}{%F}\n", 1444565444646.6465424242242, 1444565444646.6465424242242);
 
-	printf("{%f}{%F}\n", -1.42, -1.42);
-	ft_printf("{%f}{%F}\n", -1.42, -1.42);
+//	printf("{%f}{%F}\n", -1.42, -1.42);
+//	ft_printf("{%f}{%F}\n", -1.42, -1.42);
 
-	printf("{%.3f}\n", 1.4739);
-	ft_printf("{%.3f}\n", 1.4739);
+	printf("{%20.f}\n", 666.4);
+	ft_printf("{%20.f}\n", 666.4);
 
-	printf("{%f}{%F}\n", 1.42, 1.42);
-	ft_printf("{%f}{%F}\n", 1.42, 1.42);
+//	printf("{%f}{%F}\n", 1.42, 1.42);
+//	ft_printf("{%f}{%F}\n", 1.42, 1.42);
 
 	//printf("SIZES %d\n", printf("stan a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 	//printf("SIZEM %d\n", ft_printf("mymy a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));

@@ -32,10 +32,12 @@ static int	parse_width(char *value, t_spec *spec, int len)
 	char	sym;
 
 	size = 0;
-	if (spec->flags->zero)
-		size = parse_flags(value, spec);
 	sym = (spec->flags->zero) ? '0' : ' ';
 	end = spec->width - len;
+	if (spec->flags->zero)
+		size += parse_flags(value, spec);
+	if (*value == '-' || spec->flags->plus || spec->flags->space)
+		end--;
 	while (size < end)
 	{
 		ft_putchar(sym);

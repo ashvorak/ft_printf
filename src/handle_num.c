@@ -101,13 +101,13 @@ int			handle_num(char *value, t_spec *spec)
 	int size;
 
 	size = 0;
-	len = *value != '-' ? ft_strlen(value) : ft_strlen(value) - 1;
+	len = (*value != '-') ? ft_strlen(value) : ft_strlen(value) - 1;
 	if (spec->flags->minus)
 	{
 		size += parse_flags(value, spec);
 		size += parse_accuracy(len, spec, value);
 		(*value == '-') ? value++ : 0;
-		(*value == '0' && spec->accuracy == 0) ? 0 : write(1, value, len);
+		(*value == '0' && spec->accuracy == 0) ? len-- : write(1, value, len);
 		while (size < spec->width - len)
 		{
 			ft_putchar(' ');

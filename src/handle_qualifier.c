@@ -54,9 +54,17 @@ static const char	*parse_accuracy(t_spec *spec, const char *p, va_list ap)
 {
 	if (*p != '*')
 	{
-		spec->accuracy = ft_atoi(p);
-		while (ft_isdigit(*p))
-			p++;
+		if (*p == '+' || *p == '-')
+		{
+			parse_flag(spec, p++);
+			spec->accuracy = 0;
+		}
+		else
+		{
+			spec->accuracy = ft_atoi(p);
+			while (ft_isdigit(*p))
+				p++;
+		}
 	}
 	else
 	{
