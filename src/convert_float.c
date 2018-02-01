@@ -7,8 +7,8 @@ static double fix_accuracy(double v_double, t_spec *spec)
 	double	tmp_d;
 	double 	acc;
 
-	acc = 1;
 	i = 0;
+	acc = 1;
 	tmp_d = v_double;
 	tmp_i = (ssize_t)tmp_d;
 	tmp_d -= (double)tmp_i;
@@ -48,7 +48,7 @@ char	*convert_float(double v_double, t_spec *spec)
 	v_double = (v_double < 0) ? -v_double : v_double;
 	v_int = (v_int < 0) ? -v_int : v_int;
 	v_double -= (double)v_int;
-	while (i < spec->accuracy)
+	while (i <= spec->accuracy)
 	{
 		v_double *= 10;
 		v_int = (ssize_t)v_double;
