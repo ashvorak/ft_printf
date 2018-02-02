@@ -3,7 +3,7 @@
 static double fix_accuracy(double v_double, t_spec *spec)
 {
 	int		i;
-	ssize_t 	tmp_i;
+	ssize_t tmp_i;
 	double	tmp_d;
 	double 	acc;
 
@@ -22,22 +22,22 @@ static double fix_accuracy(double v_double, t_spec *spec)
 	}
 	tmp_i = (tmp_i < 0) ? -tmp_i : tmp_i;
 	if (tmp_i >= 5)
-	{
 		acc *= 10;
-		v_double += (v_double > 0) ? acc : -acc;
-	}
-	return (v_double);
+	return (acc);
 }
 
 char	*convert_float(double v_double, t_spec *spec)
 {
 	int		i;
+	double 	acc;
 	ssize_t v_int;
 	char 	*v;
 
 	i = 0;
 	(spec->accuracy == UNDEFINED) ? spec->accuracy = 6 : 0;
-	v_double = fix_accuracy(v_double, spec);
+	acc = fix_accuracy(v_double, spec);
+	if (spec->accuracy == 0)
+		v_double += (v_double > 0) ? acc : -acc;
 	v_int = (ssize_t)v_double;
 	v = convert_int(v_int);
 	if (spec->accuracy != 0)
@@ -48,7 +48,9 @@ char	*convert_float(double v_double, t_spec *spec)
 	v_double = (v_double < 0) ? -v_double : v_double;
 	v_int = (v_int < 0) ? -v_int : v_int;
 	v_double -= (double)v_int;
-	while (i <= spec->accuracy)
+	if (spec->accuracy != 0)
+		v_double += (v_double > 0) ? acc : -acc;
+	while (i < spec->accuracy)
 	{
 		v_double *= 10;
 		v_int = (ssize_t)v_double;

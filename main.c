@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
+#include <float.h>
 
 int main(void)
 {
@@ -41,14 +42,14 @@ int main(void)
 	printf("{%f}{%F}\n", -1.42, -1.42);
 	ft_printf("{%f}{%F}\n", -1.42, -1.42);
 
-	printf("{%20.0f}\n", 666.5);
-	ft_printf("{%20.0f}\n", 666.5);
+	printf("{%20.F}\n", 667.5);
+	ft_printf("{%20.F}\n", 667.5);
 
 	printf("{%f}{%F}\n", 1.42, 1.42);
 	ft_printf("{%f}{%F}\n", 1.42, 1.42);
 
-	printf("{%f}{%F}\n", 666666666666.666, 1.42);
-	ft_printf("{%f}{%F}\n", 666666666666.666, 1.42);
+	printf("{%.6f}{%F}\n", 666666666666.666, 1.42);
+	ft_printf("{%.6f}{%F}\n", 666666666666.666, 1.42);
 	//printf("SIZES %d\n", printf("stan a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 	//printf("SIZEM %d\n", ft_printf("mymy a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 
