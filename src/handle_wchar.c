@@ -12,11 +12,11 @@
 
 #include "../inc/ft_printf.h"
 
-static int		print_width(int size, char sym, int width)
+static int		print_width(int size, char sym, int width, int fd)
 {
 	while (size < width)
 	{
-		ft_putchar(sym);
+		ft_putchar_fd(sym, fd);
 		size++;
 	}
 	return (size);
@@ -33,15 +33,15 @@ int				handle_wchar(wchar_t c, t_spec *spec)
 	if (spec->flags->minus)
 	{
 		size += size_char(bits);
-		ft_putwchar(c, bits);
-		size = print_width(size, ' ', spec->width);
+		ft_putwchar(c, bits, spec->fd);
+		size = print_width(size, ' ', spec->width, spec->fd);
 	}
 	else
 	{
 		sym = (spec->flags->zero) ? '0' : ' ';
 		size += size_char(bits);
-		size = print_width(size, sym, spec->width);
-		ft_putwchar(c, bits);
+		size = print_width(size, sym, spec->width, spec->fd);
+		ft_putwchar(c, bits, spec->fd);
 	}
 	return (size);
 }

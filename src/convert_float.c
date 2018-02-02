@@ -39,7 +39,10 @@ char	*convert_float(double v_double, t_spec *spec)
 	if (spec->accuracy == 0)
 		v_double += (v_double > 0) ? acc : -acc;
 	v_int = (ssize_t)v_double;
-	v = convert_int(v_int);
+	if (v_double == -0.0 || v_double < 0.0)
+		v = ft_strdup("-0");
+	else
+		v = convert_int(v_int);
 	if (spec->accuracy != 0)
 	{
 		v = ft_realloc(v, ft_strlen(v));

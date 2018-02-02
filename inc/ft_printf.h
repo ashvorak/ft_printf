@@ -25,6 +25,8 @@
 # define FALSE 0
 # define UNDEFINED -1
 
+int fd;
+
 typedef struct	s_flags
 {
 	int	minus;
@@ -52,6 +54,7 @@ typedef struct	s_spec
 	int		accuracy;
 	t_size	size;
 	char	type;
+	int 	fd;
 }				t_spec;
 
 int				ft_printf(const char *format, ...);
@@ -67,7 +70,7 @@ int				handle_float(char *value, t_spec *spec);
 void			handle_n(t_spec *spec, int len, va_list ap);
 int				handle_str(char *value, t_spec *spec);
 int				handle_wstr(wchar_t *value, t_spec *spec);
-void			ft_putwchar(wchar_t value, int bits);
+void			ft_putwchar(wchar_t value, int bits, int fd);
 int				active_bits(wchar_t value);
 int				size_char(int bits);
 int				is_type(char *types, char type);

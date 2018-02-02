@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-
+//fix from 21
 int	active_bits(wchar_t value)
 {
 	int				ret;

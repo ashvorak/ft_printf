@@ -12,7 +12,7 @@
 
 #include "../inc/ft_printf.h"
 
-static t_spec	*spec_new(void)
+static t_spec		*spec_new(int fd)
 {
 	t_spec	*spec;
 
@@ -29,10 +29,11 @@ static t_spec	*spec_new(void)
 	spec->accuracy = UNDEFINED;
 	spec->size = none;
 	spec->type = none;
+	spec->fd = fd;
 	return (spec);
 }
 
-static t_spec	*fix(t_spec *spec)
+static t_spec		*fix(t_spec *spec)
 {
 	if (spec->type == 'p')
 		spec->flags->hash = TRUE;
@@ -46,25 +47,52 @@ static t_spec	*fix(t_spec *spec)
 	return (spec);
 }
 
-int				ft_printf(const char *format, ...)
+static const char	*make_colors_fd(const char *format, int fd, va_list ap)
+{
+	int			i;
+	const char 	*p;
+	const char 	*s;
+
+	i = 0;
+	p = format;
+	while (*(p - 1) != '}' && *p)
+	{
+		i++;
+		p++;
+	}
+	s = ft_strsub(format, 0, i);
+	if (!ft_strcmp(s, "{fd}"))
+	{
+		fd = va_arg(ap, int);
+		format = p;
+	}
+	else
+		ft_putchar_fd(*(format++), fd);
+	return (format);
+}
+
+int					ft_printf(const char *format, ...)
 {
 	int		size;
 	t_spec	*spec;
 	va_list	ap;
 
+	fd = 1;
 	size = 0;
 	va_start(ap, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
-			spec = spec_new();
+			spec = spec_new(fd);
 			format = handle_qualifier(++format, spec, ap);
 			size += handle_value(fix(spec), ap, size);
 		}
+		else if (*format == '{')
+			format = make_colors_fd(format, fd, ap);
 		else
 		{
-			ft_putchar(*format++);
+			ft_putchar_fd(*format++, fd);
 			size++;
 		}
 	}

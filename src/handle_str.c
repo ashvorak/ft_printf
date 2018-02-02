@@ -12,14 +12,14 @@
 
 #include "../inc/ft_printf.h"
 
-static int	str_print(char *value, int len)
+static int	str_print(char *value, int len, int fd)
 {
 	int i;
 
 	i = 0;
 	while (i < len && *value)
 		i++;
-	write(1, &(*value), i);
+	write(fd, &(*value), i);
 	return (i);
 }
 
@@ -33,7 +33,7 @@ static int	parse_width(int len, t_spec *spec)
 	spec->width -= len;
 	while (size < spec->width)
 	{
-		ft_putchar(sym);
+		ft_putchar_fd(sym, spec->fd);
 		size++;
 	}
 	return (size);
@@ -51,10 +51,10 @@ int			handle_str(char *value, t_spec *spec)
 	{
 		if (spec->accuracy != UNDEFINED)
 			len = (len > spec->accuracy) ? spec->accuracy : len;
-		size += str_print(value, len);
+		size += str_print(value, len, spec->fd);
 		while (size < spec->width)
 		{
-			ft_putchar(' ');
+			ft_putchar_fd(' ', spec->fd);
 			size++;
 		}
 	}
@@ -63,7 +63,7 @@ int			handle_str(char *value, t_spec *spec)
 		if (spec->accuracy != UNDEFINED)
 			len = (len > spec->accuracy) ? spec->accuracy : len;
 		size += parse_width(len, spec);
-		size += str_print(value, len);
+		size += str_print(value, len, spec->fd);
 	}
 	return (size);
 }

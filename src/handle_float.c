@@ -17,7 +17,7 @@ static int	parse_flags(char *value, t_spec *spec)
 	if (*value == '-' || spec->flags->plus || spec->flags->space)
 	{
 		if (*value == '-')
-			ft_putchar('-');
+			ft_putchar_fd('-', spec->fd);
 		else
 			(spec->flags->plus) ? ft_putchar('+') : ft_putchar(' ');
 		return (1);
@@ -40,7 +40,7 @@ static int	parse_width(char *value, t_spec *spec, int len)
 		end--;
 	while (size < end)
 	{
-		ft_putchar(sym);
+		ft_putchar_fd(sym, spec->fd);
 		size++;
 	}
 	if (!spec->flags->zero)
@@ -59,10 +59,10 @@ int			handle_float(char *value, t_spec *spec)
 	{
 		size += parse_flags(value, spec);
 		(*value == '-') ? value++ : 0;
-		write(1, value, len);
+		write(spec->fd, value, len);
 		while (size < spec->width - len)
 		{
-			ft_putchar(' ');
+			ft_putchar_fd(' ', spec->fd);
 			size++;
 		}
 	}
@@ -70,7 +70,7 @@ int			handle_float(char *value, t_spec *spec)
 	{
 		size += parse_width(value, spec, len);
 		(*value == '-') ? value++ : 0;
-		write(1, value, len);
+		write(spec->fd, value, len);
 	}
 	return (size += ft_strlen(value));
 }

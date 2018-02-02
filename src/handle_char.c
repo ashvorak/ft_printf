@@ -22,14 +22,14 @@ int	handle_char(char c, t_spec *spec)
 	{
 		ft_putchar(c);
 		while (++size < spec->width)
-			ft_putchar(' ');
+			ft_putchar_fd(' ', spec->fd);
 	}
 	else
 	{
 		sym = (spec->flags->zero) ? '0' : ' ';
 		while (++size < spec->width)
-			ft_putchar(sym);
-		ft_putchar(c);
+			ft_putchar_fd(sym, spec->fd);
+		ft_putchar_fd(c, spec->fd);
 	}
 	return (size);
 }

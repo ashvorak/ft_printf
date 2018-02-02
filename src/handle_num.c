@@ -17,7 +17,7 @@ static int	parse_flags(char *value, t_spec *spec)
 	if (*value == '-' || spec->flags->plus || spec->flags->space)
 	{
 		if (*value == '-')
-			ft_putchar('-');
+			ft_putchar_fd('-', spec->fd);
 		else
 			(spec->flags->plus) ? ft_putchar('+') : ft_putchar(' ');
 		return (1);
@@ -27,13 +27,13 @@ static int	parse_flags(char *value, t_spec *spec)
 		if (is_type("oO", spec->type))
 			if (*value != '0' || spec->accuracy == 0)
 			{
-				ft_putchar('0');
+				ft_putchar_fd('0', spec->fd);
 				return (1);
 			}
 		if (is_type("xXp", spec->type))
 			if (*value != '0' || spec->type == 'p')
 			{
-				(spec->type == 'X') ? ft_putstr("0X") : ft_putstr("0x");
+				(spec->type == 'X') ? ft_putstr_fd("0X", spec->fd) : ft_putstr_fd("0x", spec->fd);
 				return (2);
 			}
 	}
@@ -51,7 +51,7 @@ static int	parse_accuracy(int len, t_spec *spec, char *value)
 		end--;
 	while (size < end)
 	{
-		ft_putchar('0');
+		ft_putchar_fd('0', spec->fd);
 		size++;
 	}
 	return (size);
@@ -87,7 +87,7 @@ static int	parse_width(char *value, t_spec *spec, int len)
 	end = take_end(value, spec, size, spec->width - len);
 	while (size < end)
 	{
-		ft_putchar(sym);
+		ft_putchar_fd(sym, spec->fd);
 		size++;
 	}
 	if (!spec->flags->zero || spec->accuracy >= 0)
@@ -107,10 +107,10 @@ int			handle_num(char *value, t_spec *spec)
 		size += parse_flags(value, spec);
 		size += parse_accuracy(len, spec, value);
 		(*value == '-') ? value++ : 0;
-		(*value == '0' && spec->accuracy == 0) ? len-- : write(1, value, len);
+		(*value == '0' && spec->accuracy == 0) ? len-- : write(spec->fd, value, len);
 		while (size < spec->width - len)
 		{
-			ft_putchar(' ');
+			ft_putchar_fd(' ', spec->fd);
 			size++;
 		}
 	}
@@ -119,7 +119,7 @@ int			handle_num(char *value, t_spec *spec)
 		size += parse_width(value, spec, len);
 		(*value == '-') ? value++ : 0;
 		size += parse_accuracy(len, spec, value);
-		(*value == '0' && spec->accuracy == 0) ? size-- : write(1, value, len);
+		(*value == '0' && spec->accuracy == 0) ? size-- : write(spec->fd, value, len);
 	}
 	return (size += ft_strlen(value));
 }

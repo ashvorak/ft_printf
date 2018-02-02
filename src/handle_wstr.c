@@ -25,7 +25,7 @@ static int	str_print(wchar_t *value, t_spec *spec)
 		j = size_char(bits);
 		if (i + j <= spec->accuracy || spec->accuracy == UNDEFINED)
 		{
-			ft_putwchar(*value++, bits);
+			ft_putwchar(*value++, bits, spec->fd);
 			i += j;
 		}
 		else
@@ -57,7 +57,7 @@ static int	parse_width(wchar_t *value, t_spec *spec)
 	}
 	while (size < spec->width - i)
 	{
-		ft_putchar(sym);
+		ft_putchar_fd(sym, spec->fd);
 		size++;
 	}
 	return (size);
@@ -75,7 +75,7 @@ int			handle_wstr(wchar_t *value, t_spec *spec)
 		size += str_print(value, spec);
 		while (size < spec->width)
 		{
-			ft_putchar(' ');
+			ft_putchar_fd(' ', spec->fd);
 			size++;
 		}
 	}
