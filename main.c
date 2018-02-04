@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/26 14:13:32 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/30 16:28:46 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/04 16:55:35 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,24 @@
 
 int main(void)
 {
-	int fd;
+	//int fd1;
+	//int fd2;
 
-	fd = open("file1.txt", O_RDONLY);
+	//fd1 = open("f1", O_WRONLY);
+	//fd2 = open("f2", O_WRONLY);
 
-	printf("%d", fd);
+	//printf("%d\n", fd2);
 
-	ft_printf("{fd} %d\n", 3, 123);
+	//ft_printf("{fpurple}%s\n", "abcdefg");
 
-	close(fd);
+	//printf("SIZE %d\n", printf("{%-15Z}\n", 123));
+	//printf("SIZE %d\n", ft_printf("{%-15Z}\n", 123));
+
+	//printf("SIZE %d\n", printf("{%15d}\n", 123));
+	//printf("SIZE %d\n", ft_printf("{%15d}\n", 123));
+
+	//close(fd1);
+	//close(fd2);
 
 	//int val;
 
@@ -44,7 +53,7 @@ int main(void)
 
 	//printf("SIZE %d\n", printf("%20.9f\n", 5.999994));
 
-/*
+
 	printf("SIZE %d\n", printf("%.4f\n", 1.89499999));
 	printf("SIZE %d\n", ft_printf("%.4f\n", 1.89499999));
 
@@ -59,18 +68,16 @@ int main(void)
 
 	printf("{%f}{%F}\n", 1.42, 1.42);
 	ft_printf("{%f}{%F}\n", 1.42, 1.42);
-
-	printf("{%.6f}{%F}\n", 666666666666.666, 1.42);
-	ft_printf("{%.6f}{%F}\n", 666666666666.666, 1.42);
-*/
+ 
+	printf("{%.6f}{%F}\n", 666666666666.666666, 1.42);
+	ft_printf("{%.6f}{%F}\n", 666666666666.666666, 1.42);
 
 	//printf("{%f}{%F}\n", -0.0, -1.5);
 	//ft_printf("{%f}{%F}\n", -0.0, -1.5);
 
 	//printf("{%d}{%x}\n", 123, 456);
 	//ft_printf("{%d}{%x}\n", 123, 456);
-
-	//printf("asas\033[31aaa\n");
+	
 	//printf("SIZES %d\n", printf("stan a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 	//printf("SIZEM %d\n", ft_printf("mymy a%Sb%sc%S", L"ÊM-M-^Q", "42", L"ÁM-^L´\n"));
 

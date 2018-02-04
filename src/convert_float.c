@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   convert_float.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/02/04 16:56:36 by oshvorak          #+#    #+#             */
+/*   Updated: 2018/02/04 16:58:38 by oshvorak         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ft_printf.h"
 
 static double fix_accuracy(double v_double, t_spec *spec)
@@ -39,10 +51,7 @@ char	*convert_float(double v_double, t_spec *spec)
 	if (spec->accuracy == 0)
 		v_double += (v_double > 0) ? acc : -acc;
 	v_int = (ssize_t)v_double;
-	if (v_double == -0.0 || v_double < 0.0)
-		v = ft_strdup("-0");
-	else
-		v = convert_int(v_int);
+	v = convert_int(v_int);
 	if (spec->accuracy != 0)
 	{
 		v = ft_realloc(v, ft_strlen(v));

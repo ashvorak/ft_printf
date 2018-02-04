@@ -6,7 +6,7 @@
 #    By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/23 15:12:57 by oshvorak          #+#    #+#              #
-#    Updated: 2018/01/29 20:32:19 by oshvorak         ###   ########.fr        #
+#    Updated: 2018/02/04 16:25:26 by oshvorak         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ FT_PRINTF = ./src/active_bits.c \
 			./src/handle_wstr.c \
 			./src/is_type.c \
 			./src/ft_realloc.c \
+			./src/make_colors.c \
 			./src/size_char.c
 
 LIBFT = ./lib/ft_atoi.c \

@@ -6,11 +6,14 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 16:45:17 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/29 20:34:42 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/04 16:24:10 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
+
+int	size;
+int	fd;
 
 static t_spec		*spec_new(int fd)
 {
@@ -47,7 +50,7 @@ static t_spec		*fix(t_spec *spec)
 	return (spec);
 }
 
-static const char	*make_colors_fd(const char *format, int fd, va_list ap)
+static const char	*make_colors_fd(const char *format, va_list ap)
 {
 	int			i;
 	const char 	*p;
@@ -66,14 +69,18 @@ static const char	*make_colors_fd(const char *format, int fd, va_list ap)
 		fd = va_arg(ap, int);
 		format = p;
 	}
+	else if (make_colors(s, fd))
+		format = p;
 	else
+	{
 		ft_putchar_fd(*(format++), fd);
+		size++;
+	}
 	return (format);
 }
 
 int					ft_printf(const char *format, ...)
 {
-	int		size;
 	t_spec	*spec;
 	va_list	ap;
 
@@ -89,7 +96,7 @@ int					ft_printf(const char *format, ...)
 			size += handle_value(fix(spec), ap, size);
 		}
 		else if (*format == '{')
-			format = make_colors_fd(format, fd, ap);
+			format = make_colors_fd(format, ap);
 		else
 		{
 			ft_putchar_fd(*format++, fd);

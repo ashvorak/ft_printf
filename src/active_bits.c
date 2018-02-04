@@ -6,12 +6,12 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:26:58 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 15:26:58 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/04 15:06:05 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-//fix from 21
+
 int	active_bits(wchar_t value)
 {
 	int				ret;
