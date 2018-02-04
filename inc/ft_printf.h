@@ -78,7 +78,7 @@ typedef struct	s_spec
 	int		accuracy;
 	t_size	size;
 	char	type;
-	int 	fd;
+	int		fd;
 }				t_spec;
 
 int				ft_printf(const char *format, ...);
