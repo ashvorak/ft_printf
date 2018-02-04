@@ -12,12 +12,12 @@
 
 #include "../inc/ft_printf.h"
 
-static double fix_accuracy(double v_double, t_spec *spec)
+static double	fix_accuracy(double v_double, t_spec *spec)
 {
 	int		i;
 	ssize_t tmp_i;
 	double	tmp_d;
-	double 	acc;
+	double	acc;
 
 	i = 0;
 	acc = 1;
@@ -38,20 +38,47 @@ static double fix_accuracy(double v_double, t_spec *spec)
 	return (acc);
 }
 
-char	*convert_float(double v_double, t_spec *spec)
+static char		*create_v(double v_double, ssize_t v_int, char *v, int accuracy)
 {
-	int		i;
-	double 	acc;
-	ssize_t v_int;
-	char 	*v;
+	int i;
 
 	i = 0;
+	while (i < accuracy)
+	{
+		v_double *= 10;
+		v_int = (ssize_t)v_double;
+		v_double -= (ssize_t)v_double;
+		v = ft_realloc(v, ft_strlen(v));
+		v = ft_strcat(v, ft_itoa(v_int));
+		i++;
+	}
+	return (v);
+}
+
+static char		*fix_v(char *v, double v_double)
+{
+	if (v_double < 0.0 && v_double > -1.0)
+	{
+		v = ft_realloc(v, ft_strlen(v));
+		v[0] = '-';
+		v[1] = '0';
+	}
+	return (v);
+}
+
+char			*convert_float(double v_double, t_spec *spec)
+{
+	double	acc;
+	ssize_t	v_int;
+	char	*v;
+
 	(spec->accuracy == UNDEFINED) ? spec->accuracy = 6 : 0;
 	acc = fix_accuracy(v_double, spec);
 	if (spec->accuracy == 0)
 		v_double += (v_double > 0) ? acc : -acc;
 	v_int = (ssize_t)v_double;
 	v = convert_int(v_int);
+	v = fix_v(v, v_double);
 	if (spec->accuracy != 0)
 	{
 		v = ft_realloc(v, ft_strlen(v));
@@ -62,14 +89,6 @@ char	*convert_float(double v_double, t_spec *spec)
 	v_double -= (double)v_int;
 	if (spec->accuracy != 0)
 		v_double += (v_double > 0) ? acc : -acc;
-	while (i < spec->accuracy)
-	{
-		v_double *= 10;
-		v_int = (ssize_t)v_double;
-		v_double -= (ssize_t)v_double;
-		v = ft_realloc(v, ft_strlen(v));
-		v = ft_strcat(v, ft_itoa(v_int));
-		i++;
-	}
+	v = create_v(v_double, v_int, v, spec->accuracy);
 	return (v);
 }

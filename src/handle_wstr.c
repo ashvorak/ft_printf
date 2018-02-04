@@ -69,7 +69,7 @@ int			handle_wstr(wchar_t *value, t_spec *spec)
 
 	size = 0;
 	if (!value)
-		return(handle_str((char*)value, spec));
+		return (handle_str((char*)value, spec));
 	if (spec->flags->minus)
 	{
 		size += str_print(value, spec);

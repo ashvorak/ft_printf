@@ -12,8 +12,8 @@
 
 #include "../inc/ft_printf.h"
 
-int	size;
-int	fd;
+int	g_size;
+int	g_fd;
 
 static t_spec		*spec_new(int fd)
 {
@@ -53,8 +53,8 @@ static t_spec		*fix(t_spec *spec)
 static const char	*make_colors_fd(const char *format, va_list ap)
 {
 	int			i;
-	const char 	*p;
-	const char 	*s;
+	const char	*p;
+	const char	*s;
 
 	i = 0;
 	p = format;
@@ -66,15 +66,15 @@ static const char	*make_colors_fd(const char *format, va_list ap)
 	s = ft_strsub(format, 0, i);
 	if (!ft_strcmp(s, "{fd}"))
 	{
-		fd = va_arg(ap, int);
+		g_fd = va_arg(ap, int);
 		format = p;
 	}
-	else if (make_colors(s, fd))
+	else if (make_colors(s, g_fd))
 		format = p;
 	else
 	{
-		ft_putchar_fd(*(format++), fd);
-		size++;
+		ft_putchar_fd(*(format++), g_fd);
+		g_size++;
 	}
 	return (format);
 }
@@ -84,25 +84,25 @@ int					ft_printf(const char *format, ...)
 	t_spec	*spec;
 	va_list	ap;
 
-	fd = 1;
-	size = 0;
+	g_fd = 1;
+	g_size = 0;
 	va_start(ap, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
-			spec = spec_new(fd);
+			spec = spec_new(g_fd);
 			format = handle_qualifier(++format, spec, ap);
-			size += handle_value(fix(spec), ap, size);
+			g_size += handle_value(fix(spec), ap, g_size);
 		}
 		else if (*format == '{')
 			format = make_colors_fd(format, ap);
 		else
 		{
-			ft_putchar_fd(*format++, fd);
-			size++;
+			ft_putchar_fd(*format++, g_fd);
+			g_size++;
 		}
 	}
 	va_end(ap);
-	return (size);
+	return (g_size);
 }

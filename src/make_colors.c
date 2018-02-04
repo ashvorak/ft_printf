@@ -12,7 +12,7 @@
 
 #include "../inc/ft_printf.h"
 
-static char *is_color(const char *s)
+static char	*is_color(const char *s)
 {
 	if (!ft_strcmp(s, "{black}"))
 		return (BLACK);
@@ -33,7 +33,7 @@ static char *is_color(const char *s)
 	return (NULL);
 }
 
-static char *is_background(const char *s)
+static char	*is_background(const char *s)
 {
 	if (!ft_strcmp(s, "{fblack}"))
 		return (FBLACK);
@@ -54,7 +54,7 @@ static char *is_background(const char *s)
 	return (NULL);
 }
 
-static char *is_font(const char *s)
+static char	*is_font(const char *s)
 {
 	if (!ft_strcmp(s, "{bolid}"))
 		return (BOLID);
@@ -69,7 +69,7 @@ static char *is_font(const char *s)
 	return (NULL);
 }
 
-int make_colors(const char *s, int fd)
+int			make_colors(const char *s, int fd)
 {
 	char *str;
 
@@ -95,5 +95,3 @@ int make_colors(const char *s, int fd)
 	}
 	return (0);
 }
-
-

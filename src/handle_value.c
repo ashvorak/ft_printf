@@ -51,7 +51,7 @@ static int	parse_int(t_spec *spec, va_list ap)
 	else if (spec->size == j)
 		v = convert_int(va_arg(ap, intmax_t));
 	else if (spec->size == z)
-		v = convert_int(va_arg(ap, size_t));
+		v = convert_int(va_arg(ap, ssize_t));
 	size = handle_num(v, spec);
 	(v) ? free(v) : 0;
 	return (size);
@@ -86,13 +86,14 @@ static int	parse_base(t_spec *spec, va_list ap)
 	return (size);
 }
 
-static int 	parse_float(t_spec *spec, va_list ap)
+static int	parse_float(t_spec *spec, va_list ap)
 {
 	int		size;
-	char 	*v;
+	char	*v;
 
 	v = convert_float(va_arg(ap, double), spec);
 	size = handle_float(v, spec);
+	(v) ? free(v) : 0;
 	return (size);
 }
 
