@@ -6,20 +6,20 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:25 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/30 13:31:51 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 19:12:18 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static int	parse_flags(char *v, t_spec *spec)
+static int	parse_flags(char *v, t_spec *spec, int fd)
 {
 	if (*v == '-' || spec->flags->plus || spec->flags->space)
 	{
-		if (*v == '-')
-			ft_putchar_fd('-', spec->fd);
+		if (*v == '-' || spec->flags->plus)
+			(*v == '-') ? ft_putchar_fd('-', fd) : ft_putchar_fd('+', fd);
 		else
-			(spec->flags->plus) ? ft_putchar('+') : ft_putchar(' ');
+			ft_putchar_fd(' ', fd);
 		return (1);
 	}
 	else if (spec->flags->hash)
@@ -27,14 +27,14 @@ static int	parse_flags(char *v, t_spec *spec)
 		if (is_type("oO", spec->type))
 			if (*v != '0' || spec->accuracy == 0)
 			{
-				ft_putchar_fd('0', spec->fd);
+				ft_putchar_fd('0', fd);
 				return (1);
 			}
 		if (is_type("xXp", spec->type))
 			if (*v != '0' || spec->type == 'p')
 			{
-				(spec->type == 'X') ? write(spec->fd, "0X", 2) \
-				: write(spec->fd, "0x", 2);
+				(spec->type == 'X') ? write(fd, "0X", 2) \
+				: write(fd, "0x", 2);
 				return (2);
 			}
 	}
@@ -82,7 +82,7 @@ static int	parse_width(char *v, t_spec *spec, int len)
 
 	size = 0;
 	if (spec->flags->zero && spec->accuracy < 0)
-		size = parse_flags(v, spec);
+		size = parse_flags(v, spec, spec->fd);
 	sym = (spec->flags->zero && spec->accuracy < 0) ? '0' : ' ';
 	len = spec->accuracy > len ? spec->accuracy : len;
 	end = take_end(v, spec, size, spec->width - len);
@@ -92,7 +92,7 @@ static int	parse_width(char *v, t_spec *spec, int len)
 		size++;
 	}
 	if (!spec->flags->zero || spec->accuracy >= 0)
-		size += parse_flags(v, spec);
+		size += parse_flags(v, spec, spec->fd);
 	return (size);
 }
 
@@ -105,7 +105,7 @@ int			handle_num(char *v, t_spec *spec)
 	len = (*v != '-') ? ft_strlen(v) : ft_strlen(v) - 1;
 	if (spec->flags->minus)
 	{
-		size += parse_flags(v, spec);
+		size += parse_flags(v, spec, spec->fd);
 		size += parse_accuracy(len, spec, v);
 		(*v == '-') ? v++ : 0;
 		(*v == '0' && spec->accuracy == 0) ? len-- : write(spec->fd, v, len);

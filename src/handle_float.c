@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:25 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/02/04 16:59:38 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 19:00:08 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static int	parse_flags(char *value, t_spec *spec)
 		if (*value == '-')
 			ft_putchar_fd('-', spec->fd);
 		else
-			(spec->flags->plus) ? ft_putchar('+') : ft_putchar(' ');
+			(spec->flags->plus) ? ft_putchar_fd('+', spec->fd) :\
+			ft_putchar_fd(' ', spec->fd);
 		return (1);
 	}
 	return (0);

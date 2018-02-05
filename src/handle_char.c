@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:19 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/01/27 16:10:50 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 18:57:49 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	handle_char(char c, t_spec *spec)
 	size = 0;
 	if (spec->flags->minus)
 	{
-		ft_putchar(c);
+		ft_putchar_fd(c, spec->fd);
 		while (++size < spec->width)
 			ft_putchar_fd(' ', spec->fd);
 	}
