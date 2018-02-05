@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/04 16:56:36 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/02/04 16:58:38 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 18:21:41 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,20 @@ static double	fix_accuracy(double v_double, t_spec *spec)
 
 static char		*create_v(double v_double, ssize_t v_int, char *v, int accuracy)
 {
-	int i;
+	int		i;
+	char	*buf;
 
 	i = 0;
+	buf = NULL;
 	while (i < accuracy)
 	{
 		v_double *= 10;
 		v_int = (ssize_t)v_double;
 		v_double -= (ssize_t)v_double;
 		v = ft_realloc(v, ft_strlen(v));
-		v = ft_strcat(v, ft_itoa(v_int));
+		buf = ft_itoa(v_int);
+		v = ft_strcat(v, buf);
+		(buf) ? free(buf) : 0;
 		i++;
 	}
 	return (v);

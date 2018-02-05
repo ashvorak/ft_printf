@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 15:27:41 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/02/04 16:34:46 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 17:39:49 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ static int	parse_float(t_spec *spec, va_list ap)
 	int		size;
 	char	*v;
 
+	v = NULL;
 	v = convert_float(va_arg(ap, double), spec);
 	size = handle_float(v, spec);
 	(v) ? free(v) : 0;

@@ -6,7 +6,7 @@
 /*   By: oshvorak <oshvorak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 16:45:17 by oshvorak          #+#    #+#             */
-/*   Updated: 2018/02/04 16:24:10 by oshvorak         ###   ########.fr       */
+/*   Updated: 2018/02/05 17:19:25 by oshvorak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static const char	*make_colors_fd(const char *format, va_list ap)
 {
 	int			i;
 	const char	*p;
-	const char	*s;
+	char		*s;
 
 	i = 0;
 	p = format;
@@ -74,6 +74,7 @@ static const char	*make_colors_fd(const char *format, va_list ap)
 		ft_putchar_fd(*(format++), g_fd);
 		g_size++;
 	}
+	(s) ? free(s) : 0;
 	return (format);
 }
 

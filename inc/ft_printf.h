@@ -13,12 +13,9 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <stdarg.h>
-# include <string.h>
 # include <stdlib.h>
 # include <wchar.h>
-# include <locale.h>
 # include "../lib/libft.h"
 
 # define TRUE 1
