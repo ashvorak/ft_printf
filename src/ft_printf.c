@@ -58,19 +58,17 @@ static const char	*make_colors_fd(const char *format, va_list ap)
 
 	i = 0;
 	p = format;
-	while (*(p - 1) != '}' && *p)
-	{
+	while (p[i] != '}' && p[i])
 		i++;
-		p++;
-	}
+	(p[i + 1]) ? i++ : 0;
 	s = ft_strsub(format, 0, i);
 	if (!ft_strcmp(s, "{fd}"))
 	{
 		g_fd = va_arg(ap, int);
-		format = p;
+		format = &p[i];
 	}
 	else if (make_colors(s, g_fd))
-		format = p;
+		format = &p[i];
 	else
 	{
 		ft_putchar_fd(*(format++), g_fd);

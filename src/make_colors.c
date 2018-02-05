@@ -88,7 +88,7 @@ int			make_colors(const char *s, int fd)
 		write(fd, str, ft_strlen(str));
 		return (1);
 	}
-	else if (!ft_strcmp(s, "{eoc}"))
+	if (!ft_strcmp(s, "{eoc}"))
 	{
 		write(fd, RESET, ft_strlen(RESET));
 		return (1);

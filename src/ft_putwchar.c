@@ -14,9 +14,9 @@
 
 static void	parse_2bytes(unsigned int v, unsigned int mask1, int fd)
 {
-	unsigned char octet;
-	unsigned char o1;
-	unsigned char o2;
+	unsigned int octet;
+	unsigned int o1;
+	unsigned int o2;
 
 	o2 = (v << 26) >> 26;
 	o1 = ((v >> 6) << 27) >> 27;
@@ -28,10 +28,10 @@ static void	parse_2bytes(unsigned int v, unsigned int mask1, int fd)
 
 static void	parse_3bytes(unsigned int v, unsigned int mask2, int fd)
 {
-	unsigned char octet;
-	unsigned char o1;
-	unsigned char o2;
-	unsigned char o3;
+	unsigned int octet;
+	unsigned int o1;
+	unsigned int o2;
+	unsigned int o3;
 
 	o3 = (v << 26) >> 26;
 	o2 = ((v >> 6) << 26) >> 26;
@@ -46,11 +46,11 @@ static void	parse_3bytes(unsigned int v, unsigned int mask2, int fd)
 
 static void	parse_4bytes(unsigned int v, unsigned int mask3, int fd)
 {
-	unsigned char octet;
-	unsigned char o1;
-	unsigned char o2;
-	unsigned char o3;
-	unsigned char o4;
+	unsigned int octet;
+	unsigned int o1;
+	unsigned int o2;
+	unsigned int o3;
+	unsigned int o4;
 
 	o4 = (v << 26) >> 26;
 	o3 = ((v >> 6) << 26) >> 26;
@@ -68,7 +68,7 @@ static void	parse_4bytes(unsigned int v, unsigned int mask3, int fd)
 
 void		ft_putwchar(wchar_t value, int bits, int fd)
 {
-	unsigned char	o;
+	unsigned int	o;
 	unsigned int	mask1;
 	unsigned int	mask2;
 	unsigned int	mask3;

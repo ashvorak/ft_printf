@@ -31,11 +31,11 @@ int main(void)
 
 	//ft_printf("{fpurple}%s\n", "abcdefg");
 
-	printf("SIZE %d\n", printf("{%15x}\n", 123));
-	printf("SIZE %d\n", ft_printf("{%15x}\n", 123));
+	//printf("SIZE %d\n", printf("{%15x}\n", 123));
+	//printf("SIZE %d\n", ft_printf("{%15x}\n", 123));
 
-	//printf("SIZE %d\n", printf("{%15d}\n", 123));
-	//printf("SIZE %d\n", ft_printf("{%15d}\n", 123));
+	printf("SIZE %d\n", printf("{%15d}\n", 123));
+	printf("SIZE %d\n", ft_printf("{red}{%15d}{eoc} {blue}{%d}{eoc}\n", 123, 456));
 
 	//close(fd1);
 	//close(fd2);
